@@ -1,29 +1,29 @@
-title: Looping and Custom Blocks 
+title: Schleifen und selbstgeschriebene Bl&ouml;cke
 {
 
 
 
 
-heading: Repeating commands
-	resource: Repeating commands [/bjc-r/cur/programming/loops/repeat-n/introduction-to-repeat-n.html]
-	quiz: Test yourself: Repeat [/bjc-r/cur/programming/intro/drawing/repeat-self-test.html]
-	resource: Drawing regular polygons [/bjc-r/cur/programming/loops/repeat-n/draw-regular-polygons-with-repeat.html]
-	quiz: Test yourself: Total turning [/bjc-r/cur/programming/intro/drawing/angles-self-test.html]
-	resource: Draw a star? [/bjc-r/cur/programming/loops/repeat-n/draw-regular-star.html]
-	quiz: Test yourself: More on turning [/bjc-r/cur/programming/intro/drawing/angles-self-test-2.html]
-	resource: A new way to loop [/bjc-r/cur/programming/loops/for/introduction-to-for.html]
-	resource: The FOR block [/bjc-r/cur/programming/loops/for/for.html]
-	resource: Using the FOR block [/bjc-r/cur/programming/loops/for/using-for.html]
+heading: Befehle wiederholen
+	resource: Befehle wiederholen [/bjc-r/cur/programming/loops/repeat-n/introduction-to-repeat-n.html]
+	quiz: Teste Dich: Wiederhole [/bjc-r/cur/programming/intro/drawing/repeat-self-test.html]
+	resource: Gleichm&auml;&szlig;ige Polygone zeichnen [/bjc-r/cur/programming/loops/repeat-n/draw-regular-polygons-with-repeat.html]
+	quiz: Teste Dich: Drehen um die eigenen Achse [/bjc-r/cur/programming/intro/drawing/angles-self-test.html]
+	resource: Einen Stern zeichnen star? [/bjc-r/cur/programming/loops/repeat-n/draw-regular-star.html]
+	quiz: Teste Dich: Mehr &uuml;ber Drehung [/bjc-r/cur/programming/intro/drawing/angles-self-test-2.html]
+	resource: Eine neue Methode f&uuml;r Wiederholung [/bjc-r/cur/programming/loops/for/introduction-to-for.html]
+	resource: Der FOR Block [/bjc-r/cur/programming/loops/for/for.html]
+	resource: Den FOR Block verwenden [/bjc-r/cur/programming/loops/for/using-for.html]
 	//quiz: TODO Test Yourself: FOR [/bjc-r/cur/programming/loops/for/test-yourself-for.html]
 	
 	//resource: Nested FORs [/bjc-r/cur/programming/variables/nested-for.html]
 	
 
-heading: Making your own blocks
+heading: Deine eigenen Bl&ouml;cke erzeugen
 	//resource: TODO motivation...  (we had it before w/ broadcast/wait...  how can we motivate it now? square?)
-	resource: Making your first custom block [/bjc-r/cur/programming/functions/intro/tutorial-custom-blocks.html]
+	resource: Deinen ersten eigenen Block erzeugen [/bjc-r/cur/programming/functions/intro/tutorial-custom-blocks.html]
 	//resource: Motivate parameters ( draw-square-100 -> draw-square (width) )
-	resource: Adding an input [/bjc-r/cur/programming/functions/intro/adding-a-simple-input.html]
+	resource: Eingabe hinzuf&uuml;gen [/bjc-r/cur/programming/functions/intro/adding-a-simple-input.html]
 	//	quiz: How was this made? [http://veritas.eecs.berkeley.edu/courses/mod/quiz/view.php?id=13983]
 		// eh?  how to use the ui.  if we use it here, remove the 'input type' stuff.
 	//resource: TODO a list of simple blocks to make, to practice on.  draw-triangle(size), etc 
@@ -31,23 +31,23 @@ heading: Making your own blocks
 	// naming inputs
 	      // example from old topic 4: forum: Variable Names in Between [http://veritas.eecs.berkeley.edu/courses/mod/forum/view.php?id=1743]
 	//resource: introduce varibles a bit here?
-	resource: Make a "draw polygon" block [/bjc-r/cur/programming/functions/make-a-draw-polygon-block.html]
-	resource: Bug Dance! [/bjc-r/cur/programming/functions/intro/bug-dance.html]
+	resource: Mache einen "Mal Polygon" Block [/bjc-r/cur/programming/functions/make-a-draw-polygon-block.html]
+	resource: Insektentanz! [/bjc-r/cur/programming/functions/intro/bug-dance.html]
 	
 	
 
-heading: Building complicated blocks with simple blocks
-	resource: Building with custom blocks: your first flower [/bjc-r/cur/programming/functions/intro/composing-blocks.html]
+heading: Komplizierte Bl&ouml;cke aus einfachen Bl&ouml;cken bauen
+	resource: Mit eigenen Bl&ouml;cken bauen: Deine erste Blume [/bjc-r/cur/programming/functions/intro/composing-blocks.html]
 	//quiz: TODO practice  composing functions (1/2 of Jessica's previous quiz?)
-	quiz: Composing with "buggy" blocks [/bjc-r/cur/programming/functions/intro/buggy-house-and-square.html]
-	resource: Draw a flower [/bjc-r/cur/programming/functions/intro/draw-a-flower.html]
+	quiz: Mit "fehlerhaften" Bl&ouml;cken bauen [/bjc-r/cur/programming/functions/intro/buggy-house-and-square.html]
+	resource: Male eine Blume [/bjc-r/cur/programming/functions/intro/draw-a-flower.html]
 		
 	
-heading: Using randomness
-	resource: The random block [/bjc-r/cur/programming/random/the-random-block.html]
-	resource: Moving a sprite randomly around the screen  [/bjc-r/cur/programming/random/randomly-moving-character.html]
-	quiz: Understanding The Random Block [/bjc-r/cur/programming/random/Test-Yourself-random.html]
-	resource: Draw a field of flowers [/bjc-r/cur/programming/functions/draw-field-of-flowers.html]
+heading: Den Zufall verwenden
+	resource: Der Random-Block [/bjc-r/cur/programming/random/the-random-block.html]
+	resource: Den Sprite zuf&auml;llig &uuml;ber den Bildschirm bewegen [/bjc-r/cur/programming/random/randomly-moving-character.html]
+	quiz: Den Random Block verstehen [/bjc-r/cur/programming/random/Test-Yourself-random.html]
+	resource: Male ein Blumenfeld [/bjc-r/cur/programming/functions/draw-field-of-flowers.html]
 
 
 

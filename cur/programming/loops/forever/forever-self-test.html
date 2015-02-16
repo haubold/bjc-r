@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>
-            Self Test: Looping and Sprite Direction
+            Selbst-Test: Schleifen und Richtung des Sprites
         </title>
     </head>
 	<body>
@@ -16,7 +16,7 @@
 		responseIdentifier="resp1" shuffle="true" >
 			<div class="prompt">
 				<p>
-					How many times will the sprite say "Hello!"?
+					Wie oft sagt der Sprite "Hello!"?
 				</p>
 				<img src="/bjc-r/img/prog/forever-1.png"/>
 			</div>
@@ -25,7 +25,8 @@
 					1
 				</div>
 				<div class="feedback">
-					Think about what the forever block does here.
+				  Denk dar&uuml;ber nach, was der
+					forever Block hier macht.
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
@@ -33,7 +34,8 @@
 					2
 				</div>
 				<div class="feedback">
-					Why would the sprite stop at 2 times?
+				  Warum sollte der Sprite nach 2
+					Schritten aufh&ouml;ren?
 				</div>
 			</div>
 
@@ -42,16 +44,21 @@
 					10
 				</div>
 				<div class="feedback">
-					Why would the sprite stop at 10 times?
+				  Warum sollte der Sprite nach 10
+					Schritten aufh&ouml;ren?
 				</div>
 			</div>
 
 			<div class="choice" identifier="c4">
 				<div class="text">
-					Continuously
+					Immer
 				</div>
 				<div class="feedback">
-					Correct! Unless told to do so, the sprite will not stop saying "Hello!" when the say block is embedded in a forever loop.
+				  Richtig! Solange er keinen anderen
+					Befehl bekommt, wird der Sprite
+					nicht aufh&ouml;ren "Hello!"
+					zu sagen wenn er in einer
+					forever Schleife eigebettet ist.
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp1">
@@ -66,42 +73,56 @@
 		responseIdentifier="resp2" shuffle="true" >
 			<div class="prompt">
 				<p>
-					Assuming the sprite starts at the middle of the page and pointing direction 90, where would it end up after running this script?
+				  Angenommen der Sprite startet in der
+					Mitte der Seite und zeigt
+					in Richtung 90, wo ist er am
+					Ende des Skripts?
 				</p>
 			    <img src="/bjc-r/img/prog/forever-2.png"/>
 			</div>
 			<div class="choice" identifier="c1">
 				<div class="text">
-					Farther right on the page.
+				  Weiter rechts auf der Seite.
 				</div>
 				<div class="feedback">
-					Why would the sprite stop at a certain point on the page?
+				  Warum sollte der Sprite an einem
+					bestimmten Punkt auf der Seite
+					stoppen?
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
 				<div class="text">
-					Farther left on the page.
+					Weiter links auf der Seite.
 				</div>
 				<div class="feedback">
-					Why would the sprite move to the left? Why would the sprite stop at a certain point on the page?
+				  Warum sollte der Sprite sich nach
+					links bewegen? Warum sollte
+					der Sprite an einem bestimmten
+					Punkt auf der Seite stoppen?
 				</div>
 			</div>
 
 			<div class="choice" identifier="c3">
 				<div class="text">
-					Off the page to the right.
+				  Jenseits des rechten Seitenrands.
 				</div>
 				<div class="feedback">
-					Correct! Unless told to do so, the sprite will not stop moving 10 steps and since it starts pointing right it will move to the right.
+				  Korrekt! Solange er keinen anderen
+					Befehl erh&auml;lt, wird der
+					Sprite nicht aufh&ouml;ren,
+					sich zu bewegen; und da er
+					nach rechts zeigt, wird er
+					sich nach rechts bewegen.
 				</div>
 			</div>
 
 			<div class="choice" identifier="c4">
 				<div class="text">
-					Off the page to the left.
+				  Jenseits des linken Seitenrands.
 				</div>
 				<div class="feedback">
-					Why would the sprite move to the left?
+				  Warum sollte der Sprite sich nach
+					links bewegen?
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp2">
@@ -116,42 +137,52 @@
 		responseIdentifier="resp3" shuffle="true" >
 			<div class="prompt">
 				<p>
-					What would appear on the screen when this script is run?
+				  Was erscheint auf dem Bildschirm,
+					wenn dieses Skript l&auml;uft?
 				</p>
 				<img src="/bjc-r/img/prog/forever-3.png"/>
 			</div>
 			<div class="choice" identifier="c1">
 				<div class="text">
-					The sprite would say "Tiger" forever.
+				  Der Sprite w&uuml;rde ewig "Tiger" sagen.
 				</div>
 				<div class="feedback">
-					Why wouldn't the second block inside the forever loop execute?
+				  Warum w&uuml;rde der zweite Block in
+					der Endlosschleife nicht ausgef&uuml;hrt?
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
 				<div class="text">
-					The sprite would say "Tiger" then "Panda" once. 
+				  Der Sprite w&uuml;rde jeweils einmal
+					"Tiger" und "Panda" sagen.
 				</div>
 				<div class="feedback">
-					Don't forget about the forever loop.
+				  Vergiss die Endlosschleife nicht.
 				</div>
 			</div>
 
 			<div class="choice" identifier="c3">
 				<div class="text">
-					The sprite would alternate between saying "Panda" and "Tiger" forever.
+				  Der Sprite w&uuml;rde ewig dazwischen
+					hin- und herschalten, dass er
+					"Panda" und "Tiger" sagt.
 				</div>
 				<div class="feedback">
-					Correct!
+					Korrekt!
 				</div>
 			</div>
 
 			<div class="choice" identifier="c4">
 				<div class="text">
-					The sprite would say "Panda" and "Tiger" at the same time forever.
+				  Der Sprite w&uuml;rde ewig "Panda"
+					und "Tiger" gleichzeitig sagen.
 				</div>
 				<div class="feedback">
-					Think about whether blocks execute sequentially or at the same time. This doesn't change because they are in a forever loop.
+				  &Uuml;berlege, ob Bl&ouml;cke
+					nacheinander oder gleichzeiig
+					laufen. Das &auml;ndert sich
+					nicht, nur weil sie in einer
+					Endlosschleife laufen.
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp3">
@@ -166,42 +197,51 @@
 		responseIdentifier="resp4" shuffle="true" >
 			<div class="prompt">
 				<p>
-					Assuming the sprite started in the middle of the screen facing right, what kind of drawing would the sprite make?
+				  Angenommen der Sprite f&auml;ngt in
+					der Mitte des Bildschirms an
+					und ziegt nach rechts, was
+					f&uuml;r eine Zeichnung
+					w&uuml;rde der Sprite machen?
 				</p>
 				<img src="/bjc-r/img/prog/forever-4.png"/>
 			</div>
 			<div class="choice" identifier="c1">
 				<div class="text">
-					A circle.
+				  Einen Kreis.
 				</div>
 				<div class="feedback">
-					Does the sprite's turning affect the shape that it draws in this case?
+				  Beiinflusst die Drehung des Sprites
+					nicht in diesem Fall die von
+					ihm gemalte Form?
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
 				<div class="text">
-					A dot.
+					Ein Punkt.
 				</div>
 				<div class="feedback">
-					Is the sprite moving along the screen while it's pen is down?
+				  Bewegt sich der Sprite &uuml;ber den
+					Bildschirm wenn sein Stift
+					unten ist?
 				</div>
 			</div>
 
 			<div class="choice" identifier="c3">
 				<div class="text">
-					A cylinder.
+					Ein Zylinder.
 				</div>
 				<div class="feedback">
-					Think about which part of the sprite writes with the pen.
+				  &Uuml;berlege welchen Teil der Sprite
+					mit dem Stift schreibt.
 				</div>
 			</div>
 
 			<div class="choice" identifier="c4">
 				<div class="text">
-					A straight line.
+				  Eine gerade Linie.
 				</div>
 				<div class="feedback">
-					Correct!
+				  Korrekt!
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp4">

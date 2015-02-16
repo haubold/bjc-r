@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>
-            Self Test: Nested Repeat
+            Selbsttest: Geschachtelte Wiederholung
         </title>
     </head>
 	<body>
@@ -16,7 +16,8 @@
 		responseIdentifier="resp1" shuffle="false" >
 			<div class="prompt">
 				<p>
-					How many times in total does the script below say "Hip"?
+					Wie oft sagt das Skript unten
+					insgesamt "Hip"?
 				</p>
 				<img src="/bjc-r/img/prog/hip32.png"/>
 			</div>
@@ -25,9 +26,15 @@
 					8
 				</div>
 				<div class="feedback">
-					The outer <code>repeat</code> runs its input script twice. 
-					For each of those two runs, how many times does the inner <code>repeat</code> run the <code>say</code> block? 
-					The total number of times will be twice that number.
+				  Der
+					&auml;&szlig;ere <code>repeat</code>
+					wiederholt das Eingabeskript
+					zwei Mal. Wie oft wird der
+					innere <code>say</code> Block bei jedem dieser
+					zwei L&auml;fe
+					ausgef&uuml;hrt? Die
+					Gesamtzahl der Wiederholungen
+					ist zweimal diese Zahl.
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
@@ -35,8 +42,10 @@
 					2
 				</div>
 				<div class="feedback">
-					The inner repeat block will call the "say Hip..." block twice, but 
-					don't forget about the outer repeat block!
+				  Der innere Block ruft den "say
+					Hip..." zweimal auf, aber
+					vergiss nicht den
+					&auml;&szlig;eren Wiederholungs-Block!
 				</div>
 			</div>
 
@@ -45,8 +54,10 @@
 					3
 				</div>
 				<div class="feedback">
-					Nope!  Look carefully at the repeat loops, and which loops the 
-                    "say Hip for 2 secs" block is inside.
+					Nein!  Schau Dir die Schleifen
+					sorgf&auml;ltig an,
+					insbesondere die Schleife, die den
+                    "say Hip for 2 secs" Block enth&auml;lt.
 				</div>
 			</div>
 
@@ -55,7 +66,12 @@
 					6
 				</div>
 				<div class="feedback">
-					Correct! Each time through the inner repeat says it twice, and the outer repeat runs the inner one three times, for a total of 3*2=6.
+				  Stimmt! Jeder Lauf der inneren
+					Schleife sagt es zweimal, und
+					die &auml;&szlig;ere Schleife
+					l&ouml;st die innere dreimal
+					aus, insgesamt also 
+				        3*2=6.
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp1">
@@ -70,7 +86,8 @@
 		responseIdentifier="resp2" shuffle="false" >
 			<div class="prompt">
 				<p>
-					How many times in total does the same script say "Hooray"?
+					Wie oft sagt dasselbe Skript
+					insgesamt "Hooray"?
 				</p>
 			    <img src="/bjc-r/img/prog/hip32.png"/>
 			</div>
@@ -79,7 +96,8 @@
 					6
 				</div>
 				<div class="feedback">
-					"Horray!" is only inside the outer repeat block.
+					"Horray!" steht nur im
+					&auml;&szlig;eren Wiederholungs-Block.
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
@@ -87,7 +105,7 @@
 					3
 				</div>
 				<div class="feedback">
-					Correct!
+					Stimmt!
 				</div>
 			</div>
 
@@ -96,7 +114,8 @@
 					1
 				</div>
 				<div class="feedback">
-					No, the "say Hooray..." block is inside a "repeat" block!
+				  Nein, der "say Hooray..." Block ist
+					innerhalb eines "repeat" Blocks!
 				</div>
 			</div>
 
@@ -105,7 +124,8 @@
 					2
 				</div>
 				<div class="feedback">
-					No, how many times is the "say Horray! for 2 secs" block repeating?
+				  Nein, wie oft wiederholt sich der
+					"say Horray! for 2 secs" Block?
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp2">
@@ -120,7 +140,8 @@
 		responseIdentifier="resp3" shuffle="false" >
 			<div class="prompt">
 				<p>
-					How many times in total does this <u>different</u> script say "Hip"?
+				  Wie oft sagt dieses <u>andere</u>
+					Skript "Hip"?
 				</p>
 				<img src="/bjc-r/img/prog/hip032.png"/>
 			</div>
@@ -129,8 +150,9 @@
 					0
 				</div>
 				<div class="feedback">
-					Correct!  The "repeat 0" block will ignore its inner blocks
-					completely.
+				  Stimmt! Der "repeat 0" Block
+					ignoriert seine inneren
+					Bl&ouml;cke vollkommen.
 				</div>
 			</div>
 			<div class="choice" identifier="c2">
@@ -138,8 +160,10 @@
 					2
 				</div>
 				<div class="feedback">
-					No; look carefully at the way the three repeat blocks
-					are nested.
+				  Nein; schau Dir sorgf&auml;ltig an,
+					wie die drei
+					Wiederholungsbl&ouml;cke
+					geschachtelt sind.
 				</div>
 			</div>
 
@@ -148,8 +172,10 @@
 					3
 				</div>
 				<div class="feedback">
-					No; look carefully at the way the three repeat blocks
-                    are nested.
+				  Nein; schau Dir sorgf&auml;ltig an,
+					wie die drei
+					Wiederholungsbl&ouml;cke
+					geschachtelt sind.
 				</div>
 			</div>
 
@@ -158,9 +184,13 @@
 					6
 				</div>
 				<div class="feedback">
-					No; look carefully at the outermost repeat block, with 
-					a 0 as its parameter.  That outer "repeat 0" block 
-					will run its inner blocks <b>zero</b> times.
+				  Nein; schau Dir sorgf&auml;ltig den
+					&auml;&szlig;eren
+					Wiederholungsblock an, der
+					eine 0 als Parameter
+					hat. Dieser &auml;&szlig;ere
+					"repeat 0" Block treibt seinen
+					inneren Block <b>null</b> Mal.
 				</div>
 			</div>
 			<div class="responseDeclaration" identifier="resp3">

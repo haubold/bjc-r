@@ -3,28 +3,33 @@
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
 
         <title>
-            Make a Kaleidoscope
+	  Mache ein Kaleidoskop
         </title>
     </head>
     <body>
         <p>
-            Explore <a class="run" href="/bjc-r/prog/drawing/kaleidoscope.xml">this 
-            drawing program</a> for a little bit. Press
-            the spacebar to run the program, and move your mouse cursor over
-            the stage of the <span class="snap">snap</span>  window. 
-            While over the stage, use the <code>d</code> (pen down), 
-            <code>u</code> (pen up), and <code>c</code> (clear) keyboard keys 
-            to change what gets drawn on the screen. The script that 
-            causes the sprite to follow the pointer is
+	  Schau Dir <a class="run"
+            href="/bjc-r/prog/drawing/kaleidoscope.xml">dieses
+            Malprogramm</a> ein biss an. Dr&uuml;cke die Leertaste um
+            das Programm laufen zu lassen ,und bewege den Mauszeiger
+            &uuml;ber die B&uuml;hne des <span class="snap">snap</span>  Fensters. 
+	  Wenn Du &uuml;ber der B&uuml;hne bist, verwende die <code>d</code> (<i>pen down</i>), 
+            <code>u</code> (<i>pen up</u>), und <code>c</code>
+            (<i>clear</i>) Tasten, um zu &auml;ndern was auf den
+            Bildschirm gemalt wird. Das Skript, das den Sprite
+            veranlasst, dem Zeiger zu folgen ist
         </p>
         <p>
             <img class="indent" src="/bjc-r/img/blocks/follow-that-mouse-when-space.png" alt="Kaleidoscope Script"/>
         </p>
         <p>
-            As you can see, this drawing program features more
-            <b>Control</b> blocks, in addition to the <code>forever</code> block
-            first introduced in the <i>Follow the Mouse</i> activity. These <em>hat</em> shaped blocks, which can be used only at the beginning
-            of a script, indicate when a specific script should be run.
+	  Wie Du sehen kannst, enth&auml;lt dieses Malprogramm mehr
+            <b>Control</b> Bl&ouml;cke, zus&auml;tzlich zu
+            dem <code>forever</code> Block, den wir zuerst im
+            Abschnitt <i>Folge dieser Maus</i> gesehen haben. Diese
+            <em>hutf&ouml;rmigen</em> Bl&ouml;cke, die nur am Anfang
+            eines Skripts verwendet werden k&ouml;nnen, zeigen wann
+            ein bestimmtes Skript laufen soll.
         </p>
 
         <div class="alert quoteGreen">
@@ -40,37 +45,45 @@
         </p>
 
         <p class="step">
-            You will need four sprites.  (We
-            haven't used more than one sprite up to now, but having more than
-            one allows for more interesting projects, as you'll see.) The
-            easiest way to create three more is to <em>duplicate</em> the one
-            you have. Right-click the sprite in the sprite corral, and select
-            <b>duplicate</b> from the <em>context menu</em> that appears. Each
-            duplicated sprite will have exactly the same scripts as the
-            original, which is why we suggest duplication rather than just
-            creating more sprites from scratch.
+	  Du brauchst vier Sprites. (Wir haben bisher nicht mehr als
+            einen Sprite verwendet, aber mit mehr k&ouml;nnen wir
+            interessantere Projekte bauen, wie Du sehen wirst. Die
+            einfachste Methode, drei weitere zu erzeugen, ist den
+            vorhandenen Sprite zu <em>kopieren</em>. Rechts-klicke
+            den Sprite im Sprite-Bereich, und
+            w&auml;hle <b>duplicate</b> aus dem <em>context menu</em>,
+            das erscheint. Jeder duplizierte Sprite hat genau die
+            gleichen Skripte wie das Original, was der Grund
+            daf&uuml;r ist, dass wir Kopieren dem Neuerzeugen vorziehen.
         </p>
         <p class="step">
-            You can change the color of each sprite by clicking the color input 
-            in that sprite's <img src="/bjc-r/img/blocks/set-pen-color.png" alt="Set Pen to Color X Block"/> 
-            block (found under the <b>Pen</b> tab), choosing a color, and then 
-            clicking on the the block itself (to run the block and actually set the color). 
-            Don't worry about matching the colors in the animation exactly!
+	  Du kannst die Farbe jedes Sprite &auml;ndern, indem Du den
+            <img src="/bjc-r/img/blocks/set-pen-color.png" alt="Set
+            Pen to Color X Block"/> Block des Sprite klickst (findest
+            Du unter dem <b>Pen</b> Reiter), eine Farbe
+            ausw&auml;hlst, und dann auf den Block selber klickst (um
+            den Block laufen zu lassen und die Farbe wirklich zu
+            setzen). Mach Dir keine M&uuml;he, die Farben der
+            Animation genau zu treffen!
         </p>
         <p class="step">
-            Pay close attention to what each of
-            the other sprites is doing in the animation above. You will need to
-            modify the <b>x</b> and <b>y</b> inputs in each sprite's <img src="/bjc-r/img/blocks/go-to-x-y-0-0.png" alt="Go to X Y Block"/> 
-            block using simple formulas,
-            with <img class="inline" src="/bjc-r/img/blocks/plus.png"> and 
+	  Achte genau darauf, was jeder der anderen Sprites in der
+            Animation oben tut. Du wirst die <b>x</b> und <b>y</b>
+            Inputs in jedem <img src="/bjc-r/img/blocks/go-to-x-y-0-0.png" alt="Go to X Y Block"/> 
+            Block des Sprite durch einfache Formeln setzen,
+            mit <img class="inline" src="/bjc-r/img/blocks/plus.png">
+            und
             <img class="inline" src="/bjc-r/img/blocks/minus.png">.
         </p>
         <p class="step">
-          Hint: All the sprites are reflecting in different ways around the (x=0, y=0) origin point of the stage.
-          (Notice that one sprite is following the mouse.)
+	  Hinweis: Alle Sprites spiegeln sich auf unterschiedliche
+          Weise um den (x=0, y=0) Ursprung der B&uuml;hne. (Bemerke
+          dass ein Sprite der Maus folgt.)
         </p> 
         <p>
-            Once you figured this out, try out some complicated formulas and/or more sprites, and share with your classmates!
+	  Wenn Du das geschafft hast, versuche ein paar
+            komplizierte Formeln und/oder mehr Sprites, und zeige das
+            Ergebnis Deinen Klassenkameraden!
         </p>
     </body>
 </html>

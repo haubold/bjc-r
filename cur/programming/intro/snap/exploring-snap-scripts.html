@@ -3,54 +3,71 @@
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
 
         <title>
-            Exploring <span class="snap">snap</span>: Scripts
+            <span class="snap">snap</span> erkunden: Skripte
         </title>
     </head>
     <body>
 
         <p>
-            Now that you have figured out how to make a sprite move, you might be wondering how to make the sprite do other things as well.
+	  Jetzt wo Du wei&szlig;t, wie man den Sprite bewegt, fragst Du
+            Dich vielleicht, wie man den Sprite dazu bringt auch andere
+            Dinge zu tun.
         </p>
         <p>
-            To make a sprite do more than just move, we need to use different types of blocks and link them together. You can link blocks by snapping (hence the name <span class="snap">snap</span>) them together -- drag a block right underneath the one to which you want to attach it. Blocks will snap together when one block&#8217s indentation is near the tab of the one above it. You should see a white bar appear like the one in the image below, which just shows you where the block will go after you drop it.
+	  Damit der Sprite mehr tut, als sich nur zu bewegen, brauchen
+            wir verschiedene Bl&ouml;cke und verbinden sie. Du kannst
+            Bl&ouml;cke verbinden, indem Du sie zusammensteckst --
+            ziehe einen Block genau unter den, mit dem Du ihn
+            verbinden m&ouml;chtest. Bl&ouml;cke verbinden sich wenn
+            die Nut eines Blocks in die N&auml;he der Feder des
+            dar&uuml;berliegenden Blocks kommt. Dabei sollte ein
+            wei&szlig;er Strich erscheinen wie im Bild unten, der
+            zeigt, wohin der Block gehen wird, sobald Du die Maus losl&auml;sst.
         </p>
         <p>
-            <img class="indent" src="../../../../img/topic1/topic1_blocks_snapping.png" alt="Blocks Snapping Together"/>
+            <img class="indent"
+            src="../../../../img/topic1/topic1_blocks_snapping.png"
+            alt="Bl&ouml;cke verbinden"/>
         </p>
         <p>
-            If you keep attaching blocks together in this way, you will
-            create a <em>script</em>. A <span class="snap">snap</span>
-            program consists of one or more of these scripts.
+	  Indem Du auf diese Weise Bl&ouml;cke miteinander verbindest,
+            erzeugst Du
+            ein <em>Skript</em>. Ein <span class="snap">snap</span>
+            Programm besteht aus einem oder mehreren solcher Skripte.
         </p>
         <p class="alert quoteGreen">
-            Try recreating the following script in the scripting
-            area in <span class="snap">snap</span>.  The purple <code>say...</code> blocks
-            are available from the <b>Looks</b> tab.
+	  Versuche folgendes Skript in der Skriptregion
+            von <span class="snap">snap</span> zu konstruieren.  Die
+            lila Bl&ouml;cke liegen unter dem <b>Looks</b> Reiter.
             <br>
             <br>
 
-            <img class="center" src="../../../../img/topic1/topic1_justmadeascript.png" alt="You just made a script!"/>
+            <img class="center"
+            src="../../../../img/topic1/topic1_justmadeascript.png"
+            alt="Du hast gerade ein Skript gebaut!"/>
         </p>
         <p>
-            What will happen if you run this script? Remember, a
-            script will tell the sprite what to do. Click on the script and see
-            what happens! You will know that your script is running if it has a
-            highlighted border around it:
+	  Was passiert, wenn Du dieses Skript laufen l&auml;sst?
+	  Erinnere Dich daran, dass ein Skript dem Sprite sagt, was er
+	  tun soll. Klicke auf das Skript und schu was passiert! An
+	  der farbigen Umrandung erkennst Du, dass Dein Skript l&auml;uft:
         </p>
         <p>
-            <img class="center" src="../../../../img/topic1/topic1_highlightedscript.png" alt="Script Running"/>
+            <img class="center"
+            src="../../../../img/topic1/topic1_highlightedscript.png"
+            alt="Skript l&auml;uft"/>
         </p>
         <p>
-            Be sure to note: <b>blocks in a script run in a specific order,
-            from the top of the script to the bottom</b>.
+	  Merke: <b> Bl&ouml;cke in einem Skript laufen in einer
+	  bestimmten Reihenfolge, von oben nach unten</b>.
 
-            Generally, <span class="snap">snap</span>
-            waits until
-            one block has finished its job before continuing on to the block below it.
-            (One common exception is blocks that play sounds: a block's job can be
-            to <i>start</i> the sound, which means the block below it will execute while
-            the sound is still playing.
-
+	  Normalerweise wartet <span class="snap">snap</span>
+            bis ein Block fertig ist, bevor es den mit dem
+            darunterliegenden Block weitermacht. (Eine h&auml;ufige
+            Ausnahme bilden Bl&ouml;cke, die T&ouml;ne spielen: Hier
+            kann es die Aufgabe eines Block sein, den
+            Ton <i>anzufangen</i>, was bedeutet, der n&auml;chste
+            Block wir ausgef&uuml;hrt w&auml;hrend der Ton noch klingt.
         </p>
 
     </body>
