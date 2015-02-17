@@ -1,4 +1,4 @@
-# bjc-r
+# bjc-r (german translation)
 
 The Beauty and Joy of Computing labs resource repository.
 
