@@ -36,27 +36,26 @@
 	</p>
 
 	<p>
-	    Now that you've thought about the above examples, let's go over the pieces you'd need for one of them. In
-	    the banking example, you'll need to write code to ask for the user's input, withdraw money from an account,
-	    deposit money into an account, and to display the balance to the user. Returning to the question we
-	    mentioned earlier, will we always want to run all of these pieces every time we run the program? The answer
-	    should be "no." For example, if the user chooses to display their balance, we certainly don't want to run
-	    the code that withdraws money from their account. This idea can be represented in the form of conditional,
-	    or "if-then," statements. The banking example can be expressed as follows:
+	    Nun, da du über das Beispiel nachgedacht hast, lasst uns die benötigten Teile durchgehen.
+	    Im Banking-Beispiel wirst du Code für Nutzereingaben, Abheben, Einzahlen und die Kontostandsanzeige schreiben müssen.
+	    Um auf die vorher erwähnte Frage zurückzukommen, möchten wir <i>immer</i> den ganzen Code ausführen?
+	    Die Antwort ist "Nein". Wenn der Nutzen zum Beispiel auswählt, den Kontostand anzuzeigen, möchten wir ganz sicher nichts
+	    abheben. Diese Idee kann in der Form von Bedingungen oder auch "if-then" (Wenn-Dann)-Aussagen.
+	    Das Banking-Beispiel kann so ausgedrückt werden:
 	</p>
 
 	<ul>
 	    <li>
-		Ask the user what they'd like to do.
+		Frag den Nutzer, was er tun möchte.
 	    </li>
 	    <li>
-		<strong>If</strong> the user selects "withdraw," <strong>then</strong> ask them how much to withdraw and subtract that amount from their account.
+		<strong>Wenn (If)</strong> der Nutzen "abheben" auswählt, <strong>dann (then)</strong> frag wie viel und zieh diesen Betrag vom Kontostand ab.
 	    </li>
 	    <li>
-		<strong>If</strong> the user selects "deposit," <strong>then</strong> ask them how much to deposit and add that amount to their account.
+		<strong>Wenn (If)</strong> der Nutzer "einzahlen" auswählt, <strong>dann (then)</strong> frag wie viel und erhöhe den Kontostand um diesen Betrag.
 	    </li>
 	    <li>
-		<strong>If</strong> the user selects "display balance," <strong>then</strong> look up their balance and display it.
+		<strong>Wenn (If)</strong> der Nutzen "Kontostand anzeigen" auswählt, <strong>dann (then)</strong> zeig den Kontostand an.
 	    </li>
 	</ul>
 	<p>
