@@ -7,7 +7,9 @@
     </head>
     <body>
         <p>
-            The <code>max</code> block has an unexpected behavior. We wanted it to work only for numbers. Yet, you can type text into it!
+          Der <code>max</code> Block verh&auml;lt sich unerwartet. Er
+            soll nur  f&uuml;r Zahlen funktionieren. Trotzdem kannst
+            Du Text eingeben!
         </p>
         <br>
         <div style="margin-left: 40px;">
@@ -16,13 +18,16 @@
         </div>
         <br>
         <p>
-            To remedy this behavior we can specify the input type that should be used in our block.
-            Now we are going to limit the <code>max</code> block to accept only numbers as arguments. 
+          Um das zu verbessern, k&ouml;nnen wir den Eingabetyp
+            f&uuml;r unseren Block festlegen. Wir begrenzen jetzt
+            den <code>max</code> Block auf Zahlen als Eingabe.
         </p>
         <ol>
             <li>
                 <p>
-                    Open the <code>Block Editor</code> for the <code>max</code> block and click on the input <code>x</code>.
+                  &Ouml;ffne den <code>Block Editor</code> f&uuml;r
+                    den <code>max</code> Block und klicke auf die
+                    Eingabe <code>x</code>.
                 </p>
                 <br>
                 <div style="margin-left: 40px;">
@@ -32,10 +37,14 @@
             <br>
             <li>
                 <p>
-                    Then, click on the right arrow in the pop-up box shown above. This will open the dialog box shown below.
-                    This allows us to specify the shape of the slot. We want a numbers-only slot (as shown selected below).
-                    We can also specify that we want the variable to have a <em>default</em> value; this is similar to blocks
-                    like <code>move</code> that always start out with the default value <code>10</code>.
+                  Klicke anschlie&szlig;end den rechten Pfeil in der 
+                    obigen Popup-Box. Das &ouml;ffnet die Dialogbox
+                    unten. Dort k&ouml;nnen wir die Form der
+                    Aussparung festlegen. Wir wollen eine Aussparung
+                    nur f&uuml;r Zahlen (wie unten ausgew&auml;hlt). Wir k&ouml;nnen auch festlegen, dass wir
+                    der Variable einen <em>Ausgangswert</em> zuweisen;
+                    das erinnert etwa an den Block <code>move</code>,
+                    der stets mit dem Ausgangswert <code>10</code> startet.
                 </p>
             <br>
             <div style="margin-left: 40px;">
@@ -46,8 +55,12 @@
             <br>
             <li>
                 <p>
-                    Modify both the <code>x</code> and <code>y</code> variables to take only numbers and to have the default values of <code>5</code>
-                    and <code>10</code>, respectively. Your <code>Block Editor</code> should then look like this, with the default values shown in the header.
+                  Modifiziere sowohl die <code>x</code> als auch
+                    die <code>y</code> Variable, so dass sie nur Zahlen
+                    als Werte annehmen k&ouml;nnen und die
+                    Ausgangswerte <code>5</code> und <code>10</code>
+                    haben. Dein Block sollte dann so aussehen, wobei
+                    die Ausgangswerte im Header sichtbar sind.
                 </p>
                 <br>
                 <div style="margin-left: 40px;">
@@ -58,8 +71,10 @@
             <br>
             <li>
                 <p>
-                    When you click <code>OK</code>, you should be able to see your block in the <code>Operators</code> tab, with the default values filled in.
-                    Also, note that you will no longer be able to enter text.
+                  Wenn Du <code>OK</code> klickst, solltest Du Deinen
+                    Block im <code>Operators</code> Reiter sehen, samt
+                    Ausgangswerten. Bemerke auch, dass Du keinen Text
+                    mehr eingeben kannst.
                 </p>
                 <br>
                 <div style="margin-left: 40px;">
@@ -69,9 +84,16 @@
             </li>
         </ol>
         <p>
-            <em>Note</em>: Even if we specify an input type for a block it could still receive improper values when a variable is passed in as its
-             argument (<span class="snap">snap</span> won’t constantly check if the variable’s type is the same as the block’s input type).
-             As such, input types should only be used as an organizational tool to keep you thinking about what the domain (input values) of your blocks should be.
+            <em>Merke</em>: Selbst wenn wir den Eingabetypen f&uuml;r
+            einen Block spezifizieren, kann er immer noch einen
+            ungeeigneten Wert empfangen, wenn eine entsprechende Variable als
+            Argument &uuml;bergeben
+            wird. (<span class="snap">snap</span> &uuml;berpr&uuml;ft
+            nicht st&auml;ndig ob der Variablen-Typ mit dem
+            Eingabetypen des Blocks &uuml;bereinstimmt). Eingabetypen
+            sollten daher nur als Organisations-Werkzeuge verwendet
+            werden, um Dich daran zu erinnern, was die Dom&auml;ne
+            (Eingabewerte) Deines Blocks sein sollte.
         </p>
 </body>
 </html>

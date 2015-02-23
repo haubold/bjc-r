@@ -2,35 +2,35 @@ title: Abstraction and Testing
 {
 
 
-heading: More work with reporters
+heading: Mehr Arbeit mit Reportern
 
-	resource: The Max Block [/bjc-r/cur/programming/functions/review-max-block.html]
-	resource: Input types [/bjc-r/cur/programming/functions/input-types-new.html]
-	resource: Composition of Reporters [/bjc-r/cur/programming/functions/composition-of-reporters.html]
-	resource: Sum-thing's Up [/bjc-r/cur/programming/loops/sum-things-up-debug.html]
+	resource: Der Max Block [/bjc-r/cur/programming/functions/review-max-block.html]
+	resource: Eingabe-Typen [/bjc-r/cur/programming/functions/input-types-new.html]
+	resource: Reporter erstellen [/bjc-r/cur/programming/functions/composition-of-reporters.html]
+	resource: Alles zusammenfassen [/bjc-r/cur/programming/loops/sum-things-up-debug.html]
 	
-heading: Custom blocks make code easier to understand
+heading: Selbsterstellte Bl&ouml;cke machen Code leichter verst&auml;ndlich
 
-	resource: Simplifying a tic-tac-toe board drawer using custom blocks [/bjc-r/cur/programming/functions/simplifying-a-tic-tac-toe-board-drawer-using-functions.html]
-	resource: Valid-Date? [/bjc-r/cur/programming/conditionals/valid-date.html]
+	resource: Wir vereinfachen die Zeichenroutine eines Tic-Tac-Toe Bretts mit Hilfe eines  selbsterstellten Blocks [/bjc-r/cur/programming/functions/simplifying-a-tic-tac-toe-board-drawer-using-functions.html]
+	resource: Valides Datum? [/bjc-r/cur/programming/conditionals/valid-date.html]
 
-heading: Testing your code
+heading: Dein Programm testen
 
-    resource: Simple Debugging [/bjc-r/cur/programming/debugging/simple-debugging-house.html]
-    resource: The Check Block [/bjc-r/cur/programming/debugging/the-check-block.html]
-    //resource: Using The Check Block [/bjc-r/cur/programming/debugging/using-the-check-block.html]
+    resource: Einfaches Debuggen [/bjc-r/cur/programming/debugging/simple-debugging-house.html]
+    resource: Der Check Block [/bjc-r/cur/programming/debugging/the-check-block.html]
+    //resource: Verwendung des Check Blocks [/bjc-r/cur/programming/debugging/using-the-check-block.html]
     
-heading: Abstraction
+heading: Abstraktion
 
-	resource: Brick Wall [/bjc-r/cur/programming/abstraction/new-brick-wall.html]
+	resource: Ziegelwand [/bjc-r/cur/programming/abstraction/new-brick-wall.html]
 
-heading: Programs with Multiple Sprites
+heading: Programme mit mehreren Sprites
 
-	resource: Experiment with a short <span class="snap">snap</span> play [/bjc-r/cur/programming/concurrency/snap/snap-play-learn-broadcast.html]
-	quiz: Test Yourself: Go Team! [/bjc-r/cur/programming/intro/snap/test-yourself-go-team.html]
-	quiz: Test Yourself: Different ways to broadcast [/bjc-r/cur/programming/concurrency/snap/quiz-different-ways-to-broadcast.html]
-    resource: More "Message" Passing [/bjc-r/cur/programming/concurrency/snap/more-message-passing.html] 
-    resource: Global Variables [/bjc-r/cur/programming/variables/global-variables.html]
+	resource: Experimentiere mit einem kurzen <span class="snap">snap</span> Theaterst&uuml;ck [/bjc-r/cur/programming/concurrency/snap/snap-play-learn-broadcast.html]
+	quiz: Teste Dich: Go Team! [/bjc-r/cur/programming/intro/snap/test-yourself-go-team.html]
+	quiz: Teste Dich: Verschiedene Arten der Mitteilung [/bjc-r/cur/programming/concurrency/snap/quiz-different-ways-to-broadcast.html]
+    resource: Mehr zum Thema Nachrichten schicken [/bjc-r/cur/programming/concurrency/snap/more-message-passing.html] 
+    resource: Globale Variablen [/bjc-r/cur/programming/variables/global-variables.html]
        
 //heading: Variables and custom blocks
 	// quiz: Change a global variable within a block [http://veritas.eecs.berkeley.edu/courses/mod/quiz/view.php?id=13992]

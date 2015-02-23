@@ -24,7 +24,7 @@ resource: Skript-Variablen [/bjc-r/cur/programming/variables/scriptvar.html]
 quiz: Selbst-Test: Komplexe boolsche Ausdr&uuml;cke [/bjc-r/cur/programming/conditionals/complex-booleans-self-test.html]
 resource: Schaltjahr? [/bjc-r/cur/programming/conditionals/dates/checking-for-leap-years.html]
 
-heading: &Ubungen mit Pr&auml;dikaten-Operatoren
+heading: &Uuml;bungen mit Pr&auml;dikaten-Operatoren
 //resource: motivation
 resource: Reporter-Bl&ouml;cke [/bjc-r/cur/programming/functions/reporters.html]
 resource: &Uuml;bung: >= [/bjc-r/cur/programming/conditionals/predicates.html] // chop out relevant piees
