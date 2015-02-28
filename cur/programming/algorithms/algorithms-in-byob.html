@@ -22,7 +22,7 @@
 		Das zur Verfügung gestellte Framework enthält <img border="0" title="Sort" alt="Sort" src="/bjc-r/img/list/sort-block.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/sort.png">, was uns erlaubt, eine Liste zu sortieren. Die Liste zu sortieren dauert ein bisschen, also möchten wir das so selten, wie möglich machen. Wie oft werden wir die Liste in jedem Testlauf sortieren müssen?
 		<br>
 		<br>
-		Searching through sorted data, while faster, also requires a more complicated block. We won't need to search through every space in the list anymore -- we can assume that many of them won't work. We can keep track of the range of numbers in a list that are a possible solution to the problem (see diagram) by recording the minimum and maximum slots that could possibly contain our number. This range should shrink after each guess because you can throw away the half of the numbers on the wrong side of the center point. Here's how things should generally work:
+		Schneller durch die sortieren Daten zu suchen benötigt einen etwas kompliziertene Block. Wir werden nicht mehr die ganze Liste durchsuchen -- wir können davon ausgehen, dass viele nicht mehr funktionieren werden. Wir merken uns den Bereich in der Liste, der eine mögliche Lösung für unser Problem (siehe Diagramm) enthält, indem wir den minimalen und den maximalen Index zwischenspeichern, an dem unsere Zahl gespeichert sein könnte. Der Bereich sollte nach jedem Raten kleiner werden, weil wir die immer die Hälfte (die falschen Zahlen) wegschmeißen können. Hier siehst du, wie es funktionieren soll:
 		<br>
 		<ol>
 			<li>
