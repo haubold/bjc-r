@@ -19,14 +19,10 @@ Wenn ich mit der ganzen Liste fertig bin, halte ich an und sage dem Nutzer, dass
 Wie lange braucht der Algorithmus beim schlechtmöglichsten Input? Mit "schlechtmöglichst" meinen wir eine Eingabe,
 die verursacht, dass der Algorithmus am längsten arbeitet, die meisten Schritte durchlaufen muss.</p>
 
-<p> Well, since the algorithm only ever stops partway if the numbers in
-the list are not distinct, we need a list whose numbers are distinct,
-so that the algorithm will have to look at all the numbers in the list.
-We already have one such list: the list of numbers from <code>1</code> to <code>max</code>! (This is turning out to be quite a useful list.) Let's use it!</p>
-<p> Replace the "Gauss" block from the previous section with the <code>are the numbers of list distinct?</code> block that you just made. The list that we are going to test is the <code>numbers</code>
-list, as we explained above. (Also, modify what Alonzo says at the very
-end of the script to subtract the extra second that he uses to tell us
-whether the numbers in the list are distinct.)</p>
+<p>Da der Algorithmus zwischendurch stoppt, wenn einige Zahlen nicht verschieden sind, brauchen wir eine Liste mit verschiedenen Zahlen, damit der Algorithmus ganz durch läuft.
+Wir haben bereits eine solche Liste: die Liste der Zahlen von <code>1</code> bis <code>max</code>! (Das stellt sich ja als eine recht nützliche Liste heraus.) Lass uns sie benutzen!</p>
+<p>Ersetze den "Gauss"-Block vom vorherigen Kapitel mit dem <code>are the numbers of list distinct?</code>-Block, den du gerade erzeugt hast. Die Liste, mit der wir unsere Tests durchführen ist die <code>numbers</code>-Liste, wie oben erklärt.
+(Ändere zusätzlich ab, was Alonzo am Ende des Skripts sagt, um die Extrasekunde, die er dazu braucht, nicht mitzuzählen.</p>
 <p> Run the timing script with <code>max</code> set to <code>10</code>. Again, run the script a few times to get an idea of the average time the computer takes to determine if the numbers in the <code>numbers</code> list is distinct.</p>
 <p> Repeat the experiment with <code>max</code> set to <code>20</code>, <code>40</code>, and <code>100</code>.
 What happens to the running time of the block when the size of the list
