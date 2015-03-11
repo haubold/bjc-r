@@ -6,19 +6,15 @@
 <p>In der Timing-Versuchen der vorherigen Sektion hast du vielleicht bemerkt,
 dass Computer immer ungefähr die gleiche Zeit benötigen, um eine Zahl zu erhöhen,
 auch wenn diese immer höher wird. Informatiker nennen dies darum eine <strong>Konstantzeit</strong>-Operation.
-Alle einfachen arithmetischen Operationen (Addition, Subtraktion, Multiplikation, Divison und Potenz) sind in der
-Regel Konstantzeit-Operationen.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Notice that we call these operations <em>constant-time</em>
-operations, but we don't actually say how much time they take.&nbsp;
-Different computers will take different amounts of time to perform the
-same operation.&nbsp; To report the exact time of any algorithm, we
-would have to also report the physical configurations of the computer
-that the algorithm was run on.&nbsp; This gets very difficult and
-annoying very fast, especially with the almost infinite variety of
-computers available today.&nbsp; Instead, we focus on how the running
-time of an algorithm scales as we scale its inputs to larger and larger
-sizes, because this is a property of the algorithm itself, and is
-independent of the computer that it is run on.</p>
+Alle einfachen arithmetischen Operationen (Addition, Subtraktion, Multiplikation,
+Divison und Potenz) sind in der Regel Konstantzeit-Operationen.</p>
+<p>Wir nennen diese <em>Konstantzeit</em>-Operationen, kümmern uns dabei aber nicht darum, wie lange sie tatsächlich
+dauern. Verschiedene Computer brauchen unterschiedlich viel Zeit, um sie durchzuführen. Um die Laufzeit eines
+Algorithmus zu messen, müssten wir auch die Merkmale des Computers miteinbeziehen. Das wird sehr schnell schwierig und
+nervig, insbesondere, weil es heutzutage so viele verschiedene Computer gibt. Stattdessen beachten wir, wie sich die
+Laufzeit eines Algorithmus mit der Länge der Eingabe verändert, weil dies eine Eigenschaft des Algorithmus an sich
+ist.</p>
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;Why did the computer take approximately the
 same amount of time to increment a number, even though that number was
 getting larger?&nbsp; Think about how you would add one to a number,
