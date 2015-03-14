@@ -17,13 +17,13 @@ durchführen, bevor wir die Zahl finden oder sicherstellen können, dass sie sic
 einer Liste der Größe 8 haben wir nach der ersten Teilung eine Liste der Größe 4, für die wir noch, so wie eben
 gezeigt, noch höchstens zwei Teilungen durchführen müssen. Bei einer Liste der Größe 16 haben wir nach einer
 Teilung eine Liste der Größe 8, für die wir höchstens noch drei Teilungen durchführen müssen. Zusammengefasst:</p>
-<table id="t5m:" style="font-size: 1em; line-height: inherit; border-collapse: collapse;" border="1" cellpadding="3" cellspacing="0" width="100%"><tbody><tr style="text-align: left;"><td width="20%">Size of list</td><td width="20%"><code>4</code></td><td width="20%"><code>8</code></td><td width="20%"><code>16</code></td><td width="20%"><code>32</code></td></tr><tr style="text-align: left;"><td width="20%">Number of splits</td><td width="20%"><code>2</code></td><td width="20%"><code>3</code></td><td width="20%"><code>4</code></td><td width="20%"><code>5</code></td></tr></tbody></table><p>&nbsp;&nbsp;&nbsp;&nbsp;Notice
-that when the size of the input doubles, the number of splits (and thus
-the runtime of the algorithm) increases by one. Also, notice that the
-top row is growing much faster than the bottom row. This behavior is
-similar to that of the logarithmic function that you may have seen
-before, where every multiplicative increase in the input is converted
-to an additive increase in the output. Such a growth is thus called a <em>logarithmic</em> growth, and this algorithm is a <strong>logarithmic-time</strong> algorithm.&nbsp; (In contrast to the linear search algorithm, this algorithm is known as a <strong>binary search</strong>.)</p>
+<table id="t5m:" style="font-size: 1em; line-height: inherit; border-collapse: collapse;" border="1" cellpadding="3" cellspacing="0" width="100%"><tbody><tr style="text-align: left;"><td width="20%">Size of list</td><td width="20%"><code>4</code></td><td width="20%"><code>8</code></td><td width="20%"><code>16</code></td><td width="20%"><code>32</code></td></tr><tr style="text-align: left;"><td width="20%">Number of splits</td><td width="20%"><code>2</code></td><td width="20%"><code>3</code></td><td width="20%"><code>4</code></td><td width="20%"><code>5</code></td></tr></tbody></table>
+<p>Bemerkst du, dass, wenn sich die Größe der Eingabe verdoppelt, sich die Anzahl der Teilungen (und damit auch die
+Laufzeit) um Eins erhöht? Auch, dass die oberste Reihe viel schneller wächst als die untere? Dieses Verhalten ähnelt
+der Logarithmusfunktion, die du vielleicht schon kennst, bei der jede multiplikative Veränderung der Eingabe in einer
+additiven Änderung der Ausgabe resultiert. Solch ein Wachstum wird <em>logarithmisch</em> genannt, und dieser
+Algorithmus hat damit eine <strong>logarithmische Laufzeit</strong>. (Im Gegensatz zu linear-search wird dieser
+Algorithmus binary-search genannt.)</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;Logarithmic-time algorithms are also
 sought-after, since their runtimes are close to, although not quite,
 constant-time. You can increase the sizes of their inputs by a large
