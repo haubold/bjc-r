@@ -2,35 +2,62 @@
 <html>
 	<head>
 		<!-- put the following in exactly --><script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title> The Check Block </title>
+		<title> Der Check Block </title>
 	</head>
 	<body>
         <p>
-            What happens, however, if our code does not give us a visual representation of our output (such as a picture of a house)
-            and we are receiving wrong results?  These cases can be a bit trickier to debug yet there are tools at our disposal.  
-            Enter the Check Block:
+          Aber was passiert, wenn Dein Code keine visuelle Ausgabe
+            gibt (wie etwa das Bild eines Hauses) und wir das falsche
+            Ergebnis bekommen? Diese F&auml;lle k&ouml;nnen etwas
+            schwierig zu debuggen sein, aber wir haben Tools, die wir
+            daf&uuml;r verwenden k&ouml;nnen. Auftritt Check Block:
         </p>
             
             <img class="indent" alt="check block" src="/bjc-r/img/debugging/check-block.png">
             
         <p>
-            <b>You must import toools to access the check block.</b> This block works by first evaluating the predicate block passed into the diamond shaped slot, which will return either a true or false
-            value.  If this predicate returns true then the check block executes the commands within the C-shaped area and then pauses all of the scripts
-            currently running.  To unpause these scripts click on the yellow button at the top right of your screen 
-            (<img class="inline" alt="play button" src="/bjc-r/img/sys/play-button.png">).  Pictured below is an easy example of how you can
-            use the check block to debug your code:
+            <b>Du musst Tools importieren, um den Check Block
+            anzusprechen.</b> Dieser Block wertet zuerst den
+            Pr&auml;dikaten-Block aus, der in die rautenf&ouml;rmigen
+            &Ouml;ffnung gesteckt wird, was entweder wahr oder falsch
+            ergibt. Wenn dieses Pr&auml;dikat wahr zur&uuml;ck
+            liefert, f&uuml;hrt der Check Block die Befehle aus, die
+            in der C-f&ouml;rmigen Region stehen und h&auml;lt dann
+            alle laufenden Skripte an. Um die Skripte wieder zu
+            starten, klicke auf den gelben Knopf am rechten oberen
+            Rand Deines Bildschirms. 
+            (<img class="inline" alt="play button"
+            src="/bjc-r/img/sys/play-button.png">).  Unten siehst Du
+            ein einfaches Beispiel, wie Du den Check-Block verwenden
+            kannst, um Deinen Code zu debuggen:
         </p>
         <a class="run" href="/bjc-r/prog/debugging/sum-of-nums-check-block.xml">
             <img class="indent" alt="sum of nums with check block" src="/bjc-r/img/debugging/sum-range-check-block.png">
         </a>
         <p>
-            This script should look familiar to you as it is in fact identical to a buggy version of <img class="inline" alt="sum of nums in range" src="/bjc-r/img/blocks/sum-of-numbers-between-1-and-10.png">.
-            Notice that the check block will pause the script if it detects that we have gone through more than one cycle of the loop (<img class="inline" alt="i greater than 1" src="/bjc-r/img/blocks/i-greater-than-1.png">)
-            but the sum has not become greater than two (<img class="inline" alt="sum not greater than 1" src="/bjc-r/img/blocks/not-sum-greater-2.png">).  We would expect that after going through the loop twice the sum varaible should be at 
-            least three (1 + 2).  Try running this script to see what happens (click on the picture to go to the code).  You should notice that the sum variable shows
-            on the stage and that its value is set to two, not three or more as expected.  As such by using the check block we can conclude that there is something wrong with how we 
-            are changing the value of our sum.  This might then lead us to realize that we have a set block within in the loop instead of a change block enabling us to
-            correct the problem.
+          Dieses Skript sollte Dir bekannt vorkommen, da es identisch
+          ist mit einer fehlerhaften Version von <img class="inline"
+          alt="sum of nums in range"
+          src="/bjc-r/img/blocks/sum-of-numbers-between-1-and-10.png">. Bemerke
+          dass der Check-Block das Skript anhalten wird wenn er
+          entdeckt, dass wir mehr als eine Iteration durchlaufen haben
+          (<img class="inline" alt="i greater than 1"
+          src="/bjc-r/img/blocks/i-greater-than-1.png">) aber die
+          Summe nicht gr&ouml;&szlig;er als zwei geworden ist
+          (<img class="inline" alt="sum not greater than 1"
+          src="/bjc-r/img/blocks/not-sum-greater-2.png">). Wir
+          w&uuml;rden erwarten, dass nach zwei Iterationen die
+          Summen-Variable mindestens drei ist (1 + 2). Versuche dieses
+          Skript laufen zu lassen und beobachte, was passiert (klicke
+          auf das Bild, um zum Code zu kommen). Du solltest sehen,
+          dass die Summen-Variable auf der B&uuml;hne (<em>Stage</em>)
+          auftaucht und ihr Wert auf zwei gesetzt ist, nicht drei oder
+          mehr wie erwartet. So k&ouml;nnen wir mit Hilfe des
+          Check-Blocks schlie&szlig;en, dass wir die Summe nicht
+          richtig berechnen. Dadurch kommen wir vielleicht dahinter,
+          dass wir einen Zuweisungs-Block (<em>set block</em>) in der
+          Schleife haben, anstelle eines Ver&auml;nderungs-Blocks
+          (<em>change block</em>), und so den Fehler beheben k&ouml;nnen.
         </p>
     </body>
 </html>

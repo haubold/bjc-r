@@ -2,96 +2,115 @@
 <html>
 		<!-- put the following in exactly --><script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
 		
-		<title>Brick Wall</title>
+		<title>Ziegelwand</title>
 	<body style="margin-top: 60px;"><div class="full"><div class="header">Brick Wall</div>
 
 		<p>
-
-			Sometimes, when we write programs and scripts, it
-			feels like we have hit a brick wall.  (This is a good
-			sign; if a project isn't hard, you're not
-			stretching your mind!)  Now, you are going
-			to draw this brick wall:
+                  Manchmal scheint es beim Programmieren, als ob wir
+                  gegen eine Wand laufen. (Das ist ein gutes Zeichen;
+                  wenn ein Projekt nicht schwierig ist, forderst Du
+                  Dich nicht genug!) Jetzt werden wir diese Wand malen:
 
 		</p>
 		<p>
 			<span style="margin-left: 40px;"><img border="0" title="Sample image of brick wall" alt="Sample image of brick wall" src="/bjc-r/img/abstraction/new-brickwall/wall.png"></span>
 		</p>
-		<h2>Abstraction</h2>
-		<p>
-			While <span class="snap">snap</span>  has lots of blocks for drawing and
-			moving, it doesn't have anything about bricks. It
-			wouldn't make sense to have one in general because
-			most programs don't involve bricks. But ones that do
-			could really use a <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png" alt="draw-brick"> block. <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png" \="" }="" alt="draw-brick"> moves us away from having to talk
-			in the computer's terms and closer to using the terms
-			of the problem we're trying to solve. The process of
-			moving from what the programming language gives you to
-			a natural language (one that humans speak to
-			communicate ) is critical to a
-			good abstraction.
+		<h2>Abstraktion</h2>
+		<p>Obwohl <span class="snap">snap</span>  viele
+		Bl&ouml;cke f&uuml;r Malen und Bewegen hast, gibt es
+		nichts zu Ziegeln. Es w&uuml;rde keinen Sinn machen,
+		von vorne herein einen Ziegel bereitzustellen, da die
+		meisten Programme keinen brauchen. Aber diejenigen
+		welche, br&auml;chten wirklich
+		einen <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png"
+		alt="draw-brick">
+		Block. <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png"
+		\="" }="" alt="draw-brick"> bringt uns weg von den
+		Kategorien des Computers und n&auml;her ran an die
+		Kategorien des Problems, das wir zu l&ouml;sen
+		versuchen. Die &Uuml;bersetzung von einer
+		Programmiersprache in eine nat&uuml;rliche Srache
+		(eine in der Menschen kommunizieren) ist
+		unerl&auml;sslich f&uuml;r gute
+		Abstraktion.
 	       </p>
-		<p>
-			In this problem, you will build an abstraction for drawing a brick wall, first by creating <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png" alt="draw-brick">, then blocks for drawing rows, and ultimately the goal: <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick-wall-num.png" alt="draw-brick-wall-n">.
+		<p>In diesem Problem baust Du eine Abstraktion, um
+		eine Ziegelwand zu malen, indem Du
+		zuerst <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png"
+		alt="draw-brick"> erzeugst, dann Bl&ouml;cke um
+		Zeilen zu malen, und schlie&szlig;lich das Ziel: <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick-wall-num.png" alt="draw-brick-wall-n">.
 		</p>
 		<p>
 			&nbsp;
 		</p>
 
-<h2>Drawing One Brick</h2>
+<h2>Einen Ziegel malen</h2>
 
-<p>A brick is a solid red rectangle ("brick red," i.e., not a bright
-primary-color red but somewhat darker).  There's no "draw rectangle" block
-in <span class="snap">snap</span> , but we can fake it by thinking of a rectangle as a very
-thick line.  You know how to draw a line, with the <b>move</b> block.
-In the <b>Pen</b> palette there's a <b>set pen size</b> block.  We can
-use it to draw a thick line:</p>
+<p>Ein Ziegel ist ein rotes Rechteck ("Ziegelrot", d. h. kein
+  Prim&auml;rfarben-Rot, sondern etwas dunkler). Es gibt keinen "Mal
+  Rechteck" Block in <span class="snap">snap</span> , aber wir
+  k&ouml;nnen so tun als ob, indem wir uns ein Rechteck als sehr dicke
+  Linie vorstellen. Du wei&szlig;t, wie man mit dem <b>move</b> Block
+  eine Linie malt. In der <b>Pen</b> Palette gibt es einen <b>set pen
+  size</b> Block. Wir k&ouml;nnen ihn verwenden, um eine dicke Linie
+  zu malen:</p>
 
 <span style="margin-left: 40px;"><img border="0" title="code for brick" alt="Code for draw brick" src="/bjc-r/img/abstraction/new-brickwall/draw-brick-code.png"></span>
 
-<p>If you try out this block, you'll notice that your brick has rounded
-ends.  These ends stick out beyond the length of the line you asked to
-draw.  Here's a picture of the rounded brick with a regular line (pen size 1)
-inside it:</p>
+<p>Wenn Du diesen Block ausprobierst, wirst Du merken, dass Dein
+  Ziegel abgerundete Ecken hat. Diese Enden ragen &uuml;ber das Ende
+  der Linie raus, die Du malen wolltest. Hier ist ein Bild eines
+  abgerundeten Ziegels mit einer normalen Linie (Pen Size 1) drin:</p>
 
 <span style="margin-left: 40px;"><img border="0" title="round brick" alt="Round brick" src="/bjc-r/img/abstraction/new-brickwall/round-brick.png"></span>
 
-<p>These rounded ends are very pretty when drawing most pictures, but
-they don't look like bricks, and they make thinking about lengths in
-this project too complicated.  So for this project you're going to turn
-off the rounded ends.  Click on the settings button
-(<img src="/bjc-r/img/abstraction/new-brickwall/settings.png" alt="settings button">) in the toolbar, and turn on the "<b>Flat line
-ends</b>" setting.
+<p>Diese abgerundeten Enden sind meistens sehr h&uuml;bsch, aber sie
+  sehen nicht wie Ziegelsteine aus, und sie verkomplizieren das
+  Nachdenken &uuml;ber L&auml;ngen in diesem Projekt. F&uuml;r dieses
+  Projekt schalten wir daher die abgerundeten Enden ab. Klicke auf
+  den <em>settings</em> Knopf
+(<img src="/bjc-r/img/abstraction/new-brickwall/settings.png"
+  alt="settings button">) im Toolbar, und schalte die Option "<b>Flat line
+ends</b>" an.
 
-		</p><h2>Using Problem Decomposition to Write an Abstraction</h2>
-		<p>
-			Consider this line of code that was used to create the brick wall:
+		</p><h2>Problemzerlegung verwenden, um eine
+		Abstraktion zu schreiben</h2>
+		<p>Betrachte diese Code-Zeile, die verwendet wurde,
+		die Zielgelwand zu bauen:
 		</p>
 		<p><img src="/bjc-r/img/abstraction/new-brickwall/draw-brick-wall-7.png" alt="draw-brick-wall-7">
 		</p>
 		<p>
-If you were to ask a mason to make a brick wall with seven rows, he would
-surely understand your meaning and make it happen. A computer, however,
-doesn't know what that means, so you have to fill in the details. This means
-going from the abstract (draw a brick wall) to the concrete (pardon the pun),
-which involves problem decomposition.
+Wenn Du einen Maurer bittest, eine Ziegelwand mit sieben Zeilen zu
+machen, versteht er Dich sicher und f&uuml;hrt sie auf. Ein Computer
+versteht allerdings nicht, was das bedeutet, und Du musst mehr Details
+liefern. Das bedeutet, vom Abstrakten (mal eine Ziegelwand) zum
+Konkreten zu gehen. Daf&uuml;r braucht man Problemzerlegung.
 		</p>
 		<p>
-			A quick observation shows that there are two kinds of rows of bricks:
+                  Eine kleine &Uuml;berlegung zeigt, dass es zwei
+			Arten von Ziegelzeilen gibt:
 		</p>
 		<ul>
 			<li>
-				<strong>Row A</strong>: <img border="0" title="Row A" alt="Row A" src="/bjc-r/img/abstraction/new-brickwall/row-a.png">
+				<strong>Zeile A</strong>: <img border="0" title="Row A" alt="Row A" src="/bjc-r/img/abstraction/new-brickwall/row-a.png">
 			</li>
 			<li>
-				<strong>Row B</strong>: <img border="0" title="Row B" alt="Row B" src="/bjc-r/img/abstraction/new-brickwall/row-b.png">
+				<strong>Zeile B</strong>: <img border="0" title="Row B" alt="Row B" src="/bjc-r/img/abstraction/new-brickwall/row-b.png">
 			</li>
 		</ul>
 
-<p>Make blocks <img src="/bjc-r/img/abstraction/new-brickwall/rowa-block.png" alt="Row A"> and <img src="/bjc-r/img/abstraction/new-brickwall/rowb-block.png" alt="Row B">.  Think about what helper blocks besides <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png" alt="Draw Brick"> you
-might want.</p>
+<p>Mache
+  Bl&ouml;cke <img src="/bjc-r/img/abstraction/new-brickwall/rowa-block.png"
+                   alt="Row A">
+  und <img src="/bjc-r/img/abstraction/new-brickwall/rowb-block.png"
+           alt="Row B">.  &Uuml;berlege, welche Hilfs-Bl&ouml;cke
+  au&szlig;er <img src="/bjc-r/img/abstraction/new-brickwall/draw-brick.png"
+  alt="Draw Brick"> Du vielleicht brauchst.</p>
 
-<p>It's possible to go overboard on abstraction, so that you have a gazillion
+<p>Es ist m&ouml;glich
+
+It's possible to go overboard on abstraction, so that you have a gazillion
 blocks and it's hard to find where the work actually gets done.  But, on the
 other hand, sometimes it's useful to make a custom block even if its
 definition is just one primitive block.  For example, to draw the
