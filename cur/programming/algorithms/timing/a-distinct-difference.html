@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html><head>
 <!-- put the following in exactly --><script type="text/javascript" src="/bjc-r/llab/loader.js"></script><title>A Distinct Difference</title><!--ORIGINAL NAME: A Distinct Difference--></head><body>
-<p>Denk über das folgende Problem nach: Ich habe eine Liste von Zahlen und möchte wissen, ob diese Zahlen <em>verschieden</em> sind.
-In anderen Worten: I möchte wissen, ob es Wiederholungen in meiner Liste gibt.
-Diese Frage taucht regelmäßig in der Informatik auf: zum Beispiel möchte Google beim Zurückgeben der Suchergebnisse
-sicherstellen, dass alle Suchergebnisse unterschiedlich sind (so weit wie möglich). Hier ist ein erster Ansatz für
-einen Algorithmus (eine Abfolge von Schritten), um dieses Problem zu lösen:</p>
+<p>Denk &uuml;ber das folgende Problem nach: Ich habe eine Liste von Zahlen und m&ouml;chte wissen, ob diese Zahlen <em>verschieden</em> sind.
+In anderen Worten: I m&ouml;chte wissen, ob es Wiederholungen in meiner Liste gibt.
+Diese Frage taucht regelm&auml;&szlig;ig in der Informatik auf: zum Beispiel m&ouml;chte Google beim Zur&uuml;ckgeben der Suchergebnisse
+sicherstellen, dass alle Suchergebnisse unterschiedlich sind (so weit wie m&ouml;glich). Hier ist ein erster Ansatz f&uuml;r
+einen Algorithmus (eine Abfolge von Schritten), um dieses Problem zu l&ouml;sen:</p>
 <br><strong>Schritt 1</strong>. Ich nehme die erste Zahl in der Liste und vergleiche sie mit allen anderen Zahlen in
 der Liste (der zweiten, der dritten, ...). Wenn die gleiche Zahl auftaucht, halte ich an und sage dem Nutzer, dass
 nicht alle Zahlen verschieden sind.
 <span style="font-weight: bold;"><br><br></span><strong>Schritt 2</strong>.
 Wenn ich Schritt 1 ohne anzuhalten beende, nehme ich die zweite Zahl und vergleiche sie mit allen Zahlen in der Liste (der dritten, der vierten, ...). Wenn die gleiche Zahl auftaucht, halte ich an und sage dem Nutzer, dass nicht alle Zahlen verschieden sind.<span style="font-weight: bold;"><br><br></span><strong>Schritt 3</strong>.
-Ich wiederhole die beiden Schritte für alle Zahlen in der Liste. Jedes Mal nehme ich eine Zahl und vergleiche sie mit allen folgenden Zahlen.<br><br><strong>Schritt 4</strong>
+Ich wiederhole die beiden Schritte f&uuml;r alle Zahlen in der Liste. Jedes Mal nehme ich eine Zahl und vergleiche sie mit allen folgenden Zahlen.<br><br><strong>Schritt 4</strong>
 Wenn ich mit der ganzen Liste fertig bin, halte ich an und sage dem Nutzer, dass alle Zahlen in der Liste <em>verschieden</em> sind.
-<p>Nimm dir Zeit, um den Algorithmus zu verstehen und frage alle Fragen, die aufkommen. Fülle den folgenden Block.
+<p>Nimm dir Zeit, um den Algorithmus zu verstehen und frage alle Fragen, die aufkommen. F&uuml;lle den folgenden Block.
 </p> <br><div style="margin-left: 40px;"><img style="width: 219px; height: 32px;" src="../../../../img/list/are-numbers-distinct-block.png" title="are the numbers in 'list' distinct?" alt="are the numbers in 'list' distinct?" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/Images/Lab08/Complexity/AreDistinctBlock.gif"><br><br></div>
-<p> Wenn du damit fertig bist, denke darüber nach, wie groß die Laufzeit im <strong>worst-case</strong> ist
-Wie lange braucht der Algorithmus beim schlechtmöglichsten Input? Mit "schlechtmöglichst" meinen wir eine Eingabe,
-die verursacht, dass der Algorithmus am längsten arbeitet, die meisten Schritte durchlaufen muss.</p>
+<p> Wenn du damit fertig bist, denke dar&uuml;ber nach, wie gro&szlig; die Laufzeit im <strong>worst-case</strong> ist
+Wie lange braucht der Algorithmus beim schlechtm&ouml;glichsten Input? Mit "schlechtm&ouml;glichst" meinen wir eine Eingabe,
+die verursacht, dass der Algorithmus am l&auml;ngsten arbeitet, die meisten Schritte durchlaufen muss.</p>
 
-<p>Da der Algorithmus zwischendurch stoppt, wenn einige Zahlen nicht verschieden sind, brauchen wir eine Liste mit verschiedenen Zahlen, damit der Algorithmus ganz durch läuft.
-Wir haben bereits eine solche Liste: die Liste der Zahlen von <code>1</code> bis <code>max</code>! (Das stellt sich ja als eine recht nützliche Liste heraus.) Lass uns sie benutzen!</p>
-<p>Ersetze den "Gauss"-Block vom vorherigen Kapitel mit dem <code>are the numbers of list distinct?</code>-Block, den du gerade erzeugt hast. Die Liste, mit der wir unsere Tests durchführen ist die <code>numbers</code>-Liste, wie oben erklärt.
-(Ändere zusätzlich ab, was Alonzo am Ende des Skripts sagt, um die Extrasekunde, die er dazu braucht, nicht mitzuzählen.</p>
+<p>Da der Algorithmus zwischendurch stoppt, wenn einige Zahlen nicht verschieden sind, brauchen wir eine Liste mit verschiedenen Zahlen, damit der Algorithmus ganz durch l&auml;uft.
+Wir haben bereits eine solche Liste: die Liste der Zahlen von <code>1</code> bis <code>max</code>! (Das stellt sich ja als eine recht n&uuml;tzliche Liste heraus.) Lass uns sie benutzen!</p>
+<p>Ersetze den "Gauss"-Block vom vorherigen Kapitel mit dem <code>are the numbers of list distinct?</code>-Block, den du gerade erzeugt hast. Die Liste, mit der wir unsere Tests durchf&uuml;hren ist die <code>numbers</code>-Liste, wie oben erkl&auml;rt.
+(&Auml;ndere zus&auml;tzlich ab, was Alonzo am Ende des Skripts sagt, um die Extrasekunde, die er dazu braucht, nicht mitzuz&auml;hlen.</p>
 <p>Lass das Skript mit <code>max</code> auf <code>10</code> gesetzt laufen. Mache das wieder ein paar Mal, um die grobe durchschnittliche Laufzeit zu ermitteln.</p>
 <p>Widerhole das Experiment mit <code>max</code> auf <code>20</code>, <code>40</code>, und <code>100</code> gesetzt.
-Was passiert mit der Laufzeit des Blocks, wenn die Länge der Liste verdoppelt wird? Was, wenn verzehnfacht? (Wenn du genug Zeit hast, probiere doch mal <code>1000</code>.)</p></body></html>
+Was passiert mit der Laufzeit des Blocks, wenn die L&auml;nge der Liste verdoppelt wird? Was, wenn verzehnfacht? (Wenn du genug Zeit hast, probiere doch mal <code>1000</code>.)</p></body></html>

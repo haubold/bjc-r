@@ -4,20 +4,20 @@
 <script type="text/javascript" src="/bjc-r/llab/loader.js"></script><title>Constant-Time</title><!--ORIGINAL NAME: Constant-Time--></head><body>
 
 <p>In der Timing-Versuchen der vorherigen Sektion hast du vielleicht bemerkt,
-dass Computer immer ungefähr die gleiche Zeit benötigen, um eine Zahl zu erhöhen,
-auch wenn diese immer höher wird. Informatiker nennen dies darum eine <strong>Konstantzeit</strong>-Operation.
+dass Computer immer ungef&auml;hr die gleiche Zeit ben&ouml;tigen, um eine Zahl zu erh&ouml;hen,
+auch wenn diese immer h&ouml;her wird. Informatiker nennen dies darum eine <strong>Konstantzeit</strong>-Operation.
 Alle einfachen arithmetischen Operationen (Addition, Subtraktion, Multiplikation,
 Divison und Potenz) sind in der Regel Konstantzeit-Operationen.</p>
-<p>Wir nennen diese <em>Konstantzeit</em>-Operationen, kümmern uns dabei aber nicht darum, wie lange sie tatsächlich
-dauern. Verschiedene Computer brauchen unterschiedlich viel Zeit, um sie durchzuführen. Um die Laufzeit eines
-Algorithmus zu messen, müssten wir auch die Merkmale des Computers miteinbeziehen. Das wird sehr schnell schwierig und
+<p>Wir nennen diese <em>Konstantzeit</em>-Operationen, k&uuml;mmern uns dabei aber nicht darum, wie lange sie tats&auml;chlich
+dauern. Verschiedene Computer brauchen unterschiedlich viel Zeit, um sie durchzuf&uuml;hren. Um die Laufzeit eines
+Algorithmus zu messen, m&uuml;ssten wir auch die Merkmale des Computers miteinbeziehen. Das wird sehr schnell schwierig und
 nervig, insbesondere, weil es heutzutage so viele verschiedene Computer gibt. Stattdessen beachten wir, wie sich die
-Laufzeit eines Algorithmus mit der Länge der Eingabe verändert, weil dies eine Eigenschaft des Algorithmus an sich
+Laufzeit eines Algorithmus mit der L&auml;nge der Eingabe ver&auml;ndert, weil dies eine Eigenschaft des Algorithmus an sich
 ist.</p>
-<p>Warum benötigte der Computer ungefähr die selbe Zeit, um eine Zahl zu erhöhen, obwohl sie immer größer wurde?
-Denk darüber nach, wie du in der Grundschule Eins auf eine Zahl addieren würdest; ein Computer macht es sehr ähnlich.
-Der Grundschul-Weg, Zahlen zu addieren, funktioniert Ziffer für Ziffer. Wie lange Addition bei dir dauert hängt also
-von der Anzahl der Ziffern ab. Als wir die Zahl verdoppelt haben, fügten wir keine Ziffern hinzu, die Addition an sich
+<p>Warum ben&ouml;tigte der Computer ungef&auml;hr die selbe Zeit, um eine Zahl zu erh&ouml;hen, obwohl sie immer gr&ouml;&szlig;er wurde?
+Denk dar&uuml;ber nach, wie du in der Grundschule Eins auf eine Zahl addieren w&uuml;rdest; ein Computer macht es sehr &auml;hnlich.
+Der Grundschul-Weg, Zahlen zu addieren, funktioniert Ziffer f&uuml;r Ziffer. Wie lange Addition bei dir dauert h&auml;ngt also
+von der Anzahl der Ziffern ab. Als wir die Zahl verdoppelt haben, f&uuml;gten wir keine Ziffern hinzu, die Addition an sich
 dauerte genau so lange.</p>
 <p>Konstantzeit-Operationen sind der Heilige Gral der Informatik. Bedauerlicherweise laufen die meisten Algorithmen
 <em>nicht</em> in Konstantzeit, wie wir bald sehen werden.</p>

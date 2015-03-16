@@ -2,7 +2,7 @@
 <html>
     <head>
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-        <title>Teste Dich: Auf die Pl&auml;tze, fertig los!</title>
+        <title>Teste Dich: Auf die Plätze, fertig los!</title>
     </head>
 
     <body>
@@ -12,44 +12,55 @@
         responseIdentifier="ri" shuffle="true"
         >
             <div class="prompt">
-                <p>Without trying this in <span class="snap">snap</span>, try to answer the following question:
+                <p>Ohne das in <span class="snap">snap</span>
+                    auszuprobieren, versuche die folgenden Frage zu beantworten:
                     <br />
                     <br />
-                    What does the following set of scripts do when the <code>Turn1</code> message is broadcast?
+                    Was machen die folgenden Skripten wenn
+                    die <code>Turn1</code> Nachricht gesendet wird?
                 </p>
                 <p><img src="/bjc-r/img/prog/receive-turn1-broadcast.png"  alt="receive turn1 broadcast script" />&nbsp;&nbsp;&nbsp;&nbsp; 
                     <img src="/bjc-r/img/prog/receive-turn2-broadcast.png"  alt="receive turn2 broadcast script" />
                   </p>
                 <p>
-                    Choose one:
+                    Wähle eins aus:
                 </p>
             </div>
 
             <div class="choice" identifier="c1">
                 <div class="text">
-                    The sprite says &quot;Go!&quot; and then &quot;Team!&quot; and then stops.
+                  Der Sprite sagt &quot;Go!&quot; und dann
+                  &quot;Team!&quot; und stoppt dann.
                 </div>
                 <div class="feedback">
-                    No, the <code>broadcast Turn1 and wait</code> block after the <code>say Team! ...</code> block will execute.  <span class="snap">snap</span>  will blindly follow its script.
+                  Nein, der <code>broadcast Turn1 and wait</code>
+                    Block nach dem <code>say Team! ...</code> Block
+                    wird ausgeführt.  <span class="snap">snap</span>
+                    wird blind seinem Skript folgen.
                 </div>
             </div>
             <div class="choice" identifier="c2">
                 <div class="text">
-                    The sprite repeatedly says &quot;Go!&quot; and then &quot;Team!&quot; until you hit the red Stop button.
+                  Der Sprite wiederholt &quot;Go!&quot; und dann
+                  &quot;Team!&quot; bis Du den Stop Knopf drückst.
                 </div>
                 <div class="feedback">
                     <p>
-                        Right!
-                        Here, we see an <em>infinite loop,</em> or a never-ending loop. 
-                        Whenever this happens in Snap<em>!</em>, we can always stop it by 
-                        pressing the Stop button at the top right of the window, just above the stage.
+                      Richtig! Wir haben hier
+                        einen <em>Endlosschleife</em>. Wenn so
+                        etwas in Snap<em>!</em> passiert, können wir
+                        es immer durch Drücken des Stop-Knopfs oben
+                        rechts im Fenster gerade über der Bühne stoppen.
                     </p>
                     <p>
-                        Why does this happen? Well, when you the <code>Turn1</code> message is first broadcast,
-                        the sprite says <code> Go!</code>
-                        for half a second, and then broadcasts a <code>Turn2</code> message.
+                      Warum passiert das? Nun, wenn die <code>
+                        Turn1</code> Nachricht zuerst gesendet wird,
+                        sagt der Sprite eine halbe Sekunde
+                        lang <code>Go!</code> und sendet dann
+                        eine <code>Turn2</code> Nachricht.
                     </p>
                     <p>
+                      
                         If there is any character that has a script that responds to the <code>Turn2</code>
                         message, it will perform that script. 
                         In this case, the same sprite has a script that responds to the <code>Turn2</code>

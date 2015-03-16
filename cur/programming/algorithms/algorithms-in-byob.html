@@ -4,7 +4,7 @@
 		<!-- put the following in exactly --><script type="text/javascript" src="/bjc-r/llab/loader.js"></script><title>Algorithms in BYOB</title><!--ORIGINAL NAME: Algorithms in BYOB-->
 	</head>
 	<body>
-		Unter der Nutzung <a href="/bjc-r/prog/BYOB/algorithms-framework.ypr">des zur Verfügung gestellten Frameworks</a>, implementiere einen BYOB-Block in dem <span style="font-weight: bold;">unsortierten</span>-Sprite, der eine Zahl in einer Liste von unsortierten Nummern mit der besprochenen Strategie findet. Der Block sollte die erzielte Zahl (die "Nadel") und eine Liste von Nummern (den "Heuhaufen") als Argumente bekommen und den Index der Zahl zurückgeben. Was war die besprochene Strategie und wie könnte man sie in BYOB implementieren? Fülle einen anderen Block für den Ansatz für sortierte Listen aus und implementiere auch ihn. Benutze das Framework, um herauszufinden, wie sich ihre Laufzeit mit der Anzahl an Nummern verändert. Welcher ist schneller für eine Liste mit der Größe 5? 50? 500? 5000? Warum?
+		Unter der Nutzung <a href="/bjc-r/prog/BYOB/algorithms-framework.ypr">des zur Verf&uuml;gung gestellten Frameworks</a>, implementiere einen BYOB-Block in dem <span style="font-weight: bold;">unsortierten</span>-Sprite, der eine Zahl in einer Liste von unsortierten Nummern mit der besprochenen Strategie findet. Der Block sollte die erzielte Zahl (die "Nadel") und eine Liste von Nummern (den "Heuhaufen") als Argumente bekommen und den Index der Zahl zur&uuml;ckgeben. Was war die besprochene Strategie und wie k&ouml;nnte man sie in BYOB implementieren? F&uuml;lle einen anderen Block f&uuml;r den Ansatz f&uuml;r sortierte Listen aus und implementiere auch ihn. Benutze das Framework, um herauszufinden, wie sich ihre Laufzeit mit der Anzahl an Nummern ver&auml;ndert. Welcher ist schneller f&uuml;r eine Liste mit der Gr&ouml;&szlig;e 5? 50? 500? 5000? Warum?
 		<br>
 		<br>
 		<div style="text-align: center;"><img border="0" title="Blocks to build" alt="Blocks to build" src="/bjc-r/img/list/find-number-in-list.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/finder-blocks.png">
@@ -12,29 +12,29 @@
 		</div>
 		<br>
 		<h3>Unsortierte Daten durchsuchen</h3>
-		Unsortierte Daten bieten einem nicht viel. Deine Kenntnis ist auf das Wesentlichste beschränkt: die Zahlen an sich. Das macht die Strategie eigentlich keine; das Beste, was du tun kannst, ist einfach die Liste von Anfang bis Ende Schritt für Schritt durchzugehen. Das ganze kann ziemlich langsam sein, wenn man sehr viele Zahlen durchsuchene möchte, ist aber bei kleinen Datenmengen tatsächlich sehr schnell. Zusätzlich ist der Ansatz sehr einfach gehalten und erfordert kein sortieren der Daten. Der Block sollte die Stelle der Zahl in der Liste oder Null, falls die Zahl in ihr nicht existiert, zurückgeben.
+		Unsortierte Daten bieten einem nicht viel. Deine Kenntnis ist auf das Wesentlichste beschr&auml;nkt: die Zahlen an sich. Das macht die Strategie eigentlich keine; das Beste, was du tun kannst, ist einfach die Liste von Anfang bis Ende Schritt f&uuml;r Schritt durchzugehen. Das ganze kann ziemlich langsam sein, wenn man sehr viele Zahlen durchsuchene m&ouml;chte, ist aber bei kleinen Datenmengen tats&auml;chlich sehr schnell. Zus&auml;tzlich ist der Ansatz sehr einfach gehalten und erfordert kein sortieren der Daten. Der Block sollte die Stelle der Zahl in der Liste oder Null, falls die Zahl in ihr nicht existiert, zur&uuml;ckgeben.
 		<br>
 		<h3>Sortierte Daten durchsuchen</h3><img border="0" style="float: right; display: inline;" src="/bjc-r/img/sys/binary-search-diagram.png" alt="Searching for Numbers" title="Searching for Numbers" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/binary-search.png">
 		<br>
-		Man könnte sagen, dass die Daten in eine bestimmte Ordnung (niedrigste =&gt; höchste, z.B.) tatsächlich neue Information erzeugt. Statt eine einfache Liste von Zahlen zu sein, fügt das Sortieren eine Ordnung hinzu und erlaubt es uns zusätzliche Annahmen zu machen, die wir vorher nicht zutreffend waren. Diese Art von Information ist anders als die der Zahlen selbst: sie ist nicht in einer Variable oder Liste aufbewahrt, aber wird eine <span style="font-style: italic;">Eigenschaft</span> der Information selbst. Wir können sie dazu nutzen, die Anzahl an Überprüfungen, die wir benötigen, um eine bestimmte Zahl zu finden, zu reduzieren. Der trade-off ist, dass wir sie dafür erst sortieren müssen (was Zeit in Anspruch nimmt).
+		Man k&ouml;nnte sagen, dass die Daten in eine bestimmte Ordnung (niedrigste =&gt; h&ouml;chste, z.B.) tats&auml;chlich neue Information erzeugt. Statt eine einfache Liste von Zahlen zu sein, f&uuml;gt das Sortieren eine Ordnung hinzu und erlaubt es uns zus&auml;tzliche Annahmen zu machen, die wir vorher nicht zutreffend waren. Diese Art von Information ist anders als die der Zahlen selbst: sie ist nicht in einer Variable oder Liste aufbewahrt, aber wird eine <span style="font-style: italic;">Eigenschaft</span> der Information selbst. Wir k&ouml;nnen sie dazu nutzen, die Anzahl an &Uuml;berpr&uuml;fungen, die wir ben&ouml;tigen, um eine bestimmte Zahl zu finden, zu reduzieren. Der trade-off ist, dass wir sie daf&uuml;r erst sortieren m&uuml;ssen (was Zeit in Anspruch nimmt).
 		<br>
 		<br>
-		Das zur Verfügung gestellte Framework enthält <img border="0" title="Sort" alt="Sort" src="/bjc-r/img/list/sort-block.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/sort.png">, was uns erlaubt, eine Liste zu sortieren. Die Liste zu sortieren dauert ein bisschen, also möchten wir das so selten, wie möglich machen. Wie oft werden wir die Liste in jedem Testlauf sortieren müssen?
+		Das zur Verf&uuml;gung gestellte Framework enth&auml;lt <img border="0" title="Sort" alt="Sort" src="/bjc-r/img/list/sort-block.png" origsrc="http://veritas.eecs.berkeley.edu/courses/file.php/17/sort.png">, was uns erlaubt, eine Liste zu sortieren. Die Liste zu sortieren dauert ein bisschen, also m&ouml;chten wir das so selten, wie m&ouml;glich machen. Wie oft werden wir die Liste in jedem Testlauf sortieren m&uuml;ssen?
 		<br>
 		<br>
-		Schneller durch die sortieren Daten zu suchen benötigt einen etwas kompliziertene Block. Wir werden nicht mehr die ganze Liste durchsuchen -- wir können davon ausgehen, dass viele nicht mehr funktionieren werden. Wir merken uns den Bereich in der Liste, der eine mögliche Lösung für unser Problem (siehe Diagramm) enthält, indem wir den minimalen und den maximalen Index zwischenspeichern, an dem unsere Zahl gespeichert sein könnte. Der Bereich sollte nach jedem Raten kleiner werden, weil wir die immer die Hälfte (die falschen Zahlen) wegschmeißen können. Hier siehst du, wie es funktionieren soll:
+		Schneller durch die sortieren Daten zu suchen ben&ouml;tigt einen etwas kompliziertene Block. Wir werden nicht mehr die ganze Liste durchsuchen -- wir k&ouml;nnen davon ausgehen, dass viele nicht mehr funktionieren werden. Wir merken uns den Bereich in der Liste, der eine m&ouml;gliche L&ouml;sung f&uuml;r unser Problem (siehe Diagramm) enth&auml;lt, indem wir den minimalen und den maximalen Index zwischenspeichern, an dem unsere Zahl gespeichert sein k&ouml;nnte. Der Bereich sollte nach jedem Raten kleiner werden, weil wir die immer die H&auml;lfte (die falschen Zahlen) wegschmei&szlig;en k&ouml;nnen. Hier siehst du, wie es funktionieren soll:
 		<br>
 		<ol>
 			<li>
-				Der Bereich der Möglichkeiten enthält am Anfang alle Zahlen in der Liste (das Minimum ist die Position #1 und das Maximum die letzte).
-				Lass uns davon ausgehen, dass wir die Zahl 33 suchen (so wie in der Grafik dargestellt). Beginne die Suche ungefähr in der Mitte der Liste. Überprüfe den Wert, der dort steht.
+				Der Bereich der M&ouml;glichkeiten enth&auml;lt am Anfang alle Zahlen in der Liste (das Minimum ist die Position #1 und das Maximum die letzte).
+				Lass uns davon ausgehen, dass wir die Zahl 33 suchen (so wie in der Grafik dargestellt). Beginne die Suche ungef&auml;hr in der Mitte der Liste. &Uuml;berpr&uuml;fe den Wert, der dort steht.
 
 			</li>
 			<li>
-				Wenn die Zahl an der aktuellen Position größer als 33 ist, setze das Maximum zu der Position, an der du gerade gesucht hast (33 kann nicht auf der anderen Seite sein, weil es kleiner als die gerade überprüfte Zahl ist). Wenn die aktuelle Zahl kleiner als 33 ist, setze das Minimum auf diese Position.
+				Wenn die Zahl an der aktuellen Position gr&ouml;&szlig;er als 33 ist, setze das Maximum zu der Position, an der du gerade gesucht hast (33 kann nicht auf der anderen Seite sein, weil es kleiner als die gerade &uuml;berpr&uuml;fte Zahl ist). Wenn die aktuelle Zahl kleiner als 33 ist, setze das Minimum auf diese Position.
 			</li>
 			<li>
-				Überprüfe die Zahl an der mittleren Stelle zwischen Minimum und Maximum. Wiederhole Schritt 2 und verkleinere den Suchbereich weiter.
+				&Uuml;berpr&uuml;fe die Zahl an der mittleren Stelle zwischen Minimum und Maximum. Wiederhole Schritt 2 und verkleinere den Suchbereich weiter.
 			</li>
 			<li>
 				Wiederhole Schritt 2 &amp; 3, bis du entweder (a) die Zahl findest oder (b) Minimum und Maximum an der gleichen Stelle sind, ohne, dass du die Zahl gefunden hast. Wenn Fall (b) eintritt, bedeutet das, dass die Zahl nicht in der Liste enthalten ist.

@@ -3,29 +3,29 @@
 
 <script type="text/javascript" src="/bjc-r/llab/loader.js"></script><title>Logarithmic-Time</title><!--ORIGINAL NAME: Logarithmic-Time--></head><body>
 <p>Diese Sektion beenden wir mit einer anderen Art von Laufzeit, die oft bei der Analyse von Algorithmen auftritt.
-<a href="/bjc-r/cur/programming/algorithms/algorithms-in-snap.html">Zwei Sektionen früher</a> haben wir ein paar
+<a href="/bjc-r/cur/programming/algorithms/algorithms-in-snap.html">Zwei Sektionen fr&uuml;her</a> haben wir ein paar
 Wege betrachtet, eine Zahl in einer Liste zu finden.
-<a href="/bjc-r/cur/programming/algorithms/timing/quiz-searching-through-time.html">Wir fanden heraus</a>, dass ein Algorithmus, der lediglich eine Liste durchläuft ein Linearzeit-Algorithmus ist. (Dieser Algorithmus ist übrigens auch
-als <em>linear search</em> bekannt. Nun weißt du, warum.) Wieauchimmer, die ewige Frage: Geht das noch besser?</p>
-<p>Wir fanden auch einen Algorithmus, der für sortierte Listen funktioniert: wir teilten die Liste in immer kleinere
-Hälften immer das mittlere Element heraussuchend, um den Suchraum zu verkleinern. Was ist die Laufzeit dieses Algorithmus?
-Naja, er ist definitiv keine Operation in Konstantzeit, weil er für längere Listen länger braucht als für kurze.
-Die Laufzeit wächst aber auch nicht linear, weil wir nicht alle Elemente in der Liste durchsuchen müssen.
+<a href="/bjc-r/cur/programming/algorithms/timing/quiz-searching-through-time.html">Wir fanden heraus</a>, dass ein Algorithmus, der lediglich eine Liste durchl&auml;uft ein Linearzeit-Algorithmus ist. (Dieser Algorithmus ist &uuml;brigens auch
+als <em>linear search</em> bekannt. Nun wei&szlig;t du, warum.) Wieauchimmer, die ewige Frage: Geht das noch besser?</p>
+<p>Wir fanden auch einen Algorithmus, der f&uuml;r sortierte Listen funktioniert: wir teilten die Liste in immer kleinere
+H&auml;lften immer das mittlere Element heraussuchend, um den Suchraum zu verkleinern. Was ist die Laufzeit dieses Algorithmus?
+Naja, er ist definitiv keine Operation in Konstantzeit, weil er f&uuml;r l&auml;ngere Listen l&auml;nger braucht als f&uuml;r kurze.
+Die Laufzeit w&auml;chst aber auch nicht linear, weil wir nicht alle Elemente in der Liste durchsuchen m&uuml;ssen.
 Die Laufzeit muss also irgendwo dazwischen liegen.</p>
-<p>Lasst uns zählen, wie oft wir die Liste geteilt haben. Für eine Liste der Größe 4 müssen wir nur zwei Teilungen
-durchführen, bevor wir die Zahl finden oder sicherstellen können, dass sie sich nicht in der Liste befindet. Bei
-einer Liste der Größe 8 haben wir nach der ersten Teilung eine Liste der Größe 4, für die wir noch, so wie eben
-gezeigt, noch höchstens zwei Teilungen durchführen müssen. Bei einer Liste der Größe 16 haben wir nach einer
-Teilung eine Liste der Größe 8, für die wir höchstens noch drei Teilungen durchführen müssen. Zusammengefasst:</p>
+<p>Lasst uns z&auml;hlen, wie oft wir die Liste geteilt haben. F&uuml;r eine Liste der Gr&ouml;&szlig;e 4 m&uuml;ssen wir nur zwei Teilungen
+durchf&uuml;hren, bevor wir die Zahl finden oder sicherstellen k&ouml;nnen, dass sie sich nicht in der Liste befindet. Bei
+einer Liste der Gr&ouml;&szlig;e 8 haben wir nach der ersten Teilung eine Liste der Gr&ouml;&szlig;e 4, f&uuml;r die wir noch, so wie eben
+gezeigt, noch h&ouml;chstens zwei Teilungen durchf&uuml;hren m&uuml;ssen. Bei einer Liste der Gr&ouml;&szlig;e 16 haben wir nach einer
+Teilung eine Liste der Gr&ouml;&szlig;e 8, f&uuml;r die wir h&ouml;chstens noch drei Teilungen durchf&uuml;hren m&uuml;ssen. Zusammengefasst:</p>
 <table id="t5m:" style="font-size: 1em; line-height: inherit; border-collapse: collapse;" border="1" cellpadding="3" cellspacing="0" width="100%"><tbody><tr style="text-align: left;"><td width="20%">Size of list</td><td width="20%"><code>4</code></td><td width="20%"><code>8</code></td><td width="20%"><code>16</code></td><td width="20%"><code>32</code></td></tr><tr style="text-align: left;"><td width="20%">Number of splits</td><td width="20%"><code>2</code></td><td width="20%"><code>3</code></td><td width="20%"><code>4</code></td><td width="20%"><code>5</code></td></tr></tbody></table>
-<p>Bemerkst du, dass, wenn sich die Größe der Eingabe verdoppelt, sich die Anzahl der Teilungen (und damit auch die
-Laufzeit) um Eins erhöht? Auch, dass die oberste Reihe viel schneller wächst als die untere? Dieses Verhalten ähnelt
-der Logarithmusfunktion, die du vielleicht schon kennst, bei der jede multiplikative Veränderung der Eingabe in einer
-additiven Änderung der Ausgabe resultiert. Solch ein Wachstum wird <em>logarithmisch</em> genannt, und dieser
+<p>Bemerkst du, dass, wenn sich die Gr&ouml;&szlig;e der Eingabe verdoppelt, sich die Anzahl der Teilungen (und damit auch die
+Laufzeit) um Eins erh&ouml;ht? Auch, dass die oberste Reihe viel schneller w&auml;chst als die untere? Dieses Verhalten &auml;hnelt
+der Logarithmusfunktion, die du vielleicht schon kennst, bei der jede multiplikative Ver&auml;nderung der Eingabe in einer
+additiven &Auml;nderung der Ausgabe resultiert. Solch ein Wachstum wird <em>logarithmisch</em> genannt, und dieser
 Algorithmus hat damit eine <strong>logarithmische Laufzeit</strong>. (Im Gegensatz zu linear-search wird dieser
 Algorithmus binary-search genannt.)</p>
 <p>Nach Algorithmen mit logarithmischer Laufzeit wird auch viel gesucht, da ihre Laufzeit der Konstantzeit-Algorithmen
-nahe ist. Man kann die Größe der Eingabe um einen sehr großen Faktor erhöhen, die Laufzeit verändert sich dabei kaum.
+nahe ist. Man kann die Gr&ouml;&szlig;e der Eingabe um einen sehr gro&szlig;en Faktor erh&ouml;hen, die Laufzeit ver&auml;ndert sich dabei kaum.
 Allgemein haben die meisten Algorithmen, bei denen in jedem Schritt der Suchraum geteilt wird, logarithmische
 Laufzeit.</p>
 </body></html>
