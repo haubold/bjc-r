@@ -2,45 +2,65 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Global Variables</title>
+<title>Globale Variablen</title>
 <script type="text/javascript" src="../../../llab/loader.js"></script>
 </head>
 
     <body>
         <p>
-          Sometimes it's not good enough to remember a value inside one script. Instead, you need the value available everywhere in your project.
-          The classic example is the score in a video game; even when no script is running, the score should be remembered.  Another case where you might
-          need to use a global variable would be when a value should be shared among multiple sprites that are interacting in a single program 
-          (maybe all of our sprites need a copy of the current game's score for example).
+          Manchmal reicht es nicht, sich den Werte einer Variable
+          innerhalb eines Skripts zu merken. Statt dessen brauchen wir
+          die Variable &uuml;berall in unserem Projekt. Das klassische
+          Beispiel daf&uuml;r ist der Spielstand; auch wenn das Skript
+          nicht l&auml;uft, sollte der Spielstand gespeichert bleiben. Ein
+          anderer Anwendungsfall f&uuml;r eine globale Variable w&auml;re ein
+          Wert, auf den verschiedene Sprites zugreifen sollen, die in
+          einem einzigen Programm miteinander interagieren (vielleicht
+          brauchen alle Deine Sprites den aktuellen Spielstand, zum Beispiel).
         </p>
         <p>
-            There was a time, in the early history of programming languages, when all variables were global. This led to a lot of bugs,
-            because different parts of the program would use the same name for different purposes and erase each others' saved values.
-            So don't use global variables as your first choice; think whether a script variable or a <code>for</code> block
-            (which makes a variable local to just that block) would work instead.
+          In fr&uuml;hen Programmiersprachen waren alle Variablen
+            global. Das f&uuml;hrte zu vielen Fehlern, da verschiedene
+            Teile des Programms den selben Namen f&uuml;r verschieden
+            Zwecke verwendeten und sich gegenseitig die Werte
+            &uuml;berschrieben. Sei daher sparsam mit globalen Variablen;
+            &uuml;berlege, ob eine Skriptvariable oder ein <code>for</code>
+            Block (der eine Variable nur f&uuml;r diesen Block lokal macht)
+            funktionieren w&uuml;rde.
         </p>
         <p>
-            To make a global variable, you must go to the Variables palette and click on the <code>Make a variable</code> button 
-            (not a block -- you can't put it into a script!):
+          Um eine Variable global zu machen, musst Du zur Variables
+            Palette gehen und auf den <code>Make a variable</code>
+            Knopf (kein Block -- Du kannst ihn nicht in ein Skript
+            packen!) klicken:
         </p>
         <p><img src="../../../img/prog/makeavar.png" alt="make a variable button" /></p>
         <p>
-            You will be prompted to give your variable a name. After you do that, you'll see an orange variable oval in the Variables palette:
+          Du wirst aufgefordert, Deiner Variablen einen Namen zu
+            geben. Nachdem Du das gemacht hast, siehst Du ein oranges
+            Variablen-Oval in der Variablen-Palette:
         </p>
         <p>
             <img src="../../../img/prog/myvar.png" alt="my-var button" />
         </p>
         <p>
-            This can be dragged into scripts just like the orange variable ovals in the <code>for</code> block and the <code>script variables</code> block.
+          Dieses kann genauso in Skripten gezogen werden, wie die
+          orangen Variablen-Ovale im <code>for</code> Block und
+          dem <code>script variables</code> Block.
         </p>
         <p>
-            The checkbox to the left of the variable block determines whether or not the value of the variable is displayed on the stage.
-            The variable <em>watcher</em> (which is what that display is called) can be useful for debugging, or can be displayed permanently
-            so that the user of your project can see the score, or whatever you have in the variable. By right-clicking on the watcher, you can
-            change the format in which it appears on the screen.
+          Die Checkbox links vom Variablen-Block bestimmt, ob der Wert
+            der Variablen auf der B&uuml;hne angezeigt wird. Die
+            Variable <em>watcher</em> (so hei&szlig;t dieses Display) kann
+            beim Debuggen n&uuml;tzlich sein. Es kann auch permanent an
+            sein, so dass der Benutzer Deines Projekts den Spielstand
+            sehen kann, oder was auch immer Du in der Variablen
+            hast. Wenn Du den Watcher rechtsklickst, kannst Du sein
+            Format &auml;ndern.
         </p>
         <p>
-            When you make a global variable, you also get a &quot;Delete a variable&quot; button that can be used for the obvious purpose.
+          Wenn Du eine Variable global machst, bekommst Du auch einen
+            &quot;Delete a variable&quot; Knopf zum L&ouml;schen einer Variablen.
         </p>
     </body>
 </html>
