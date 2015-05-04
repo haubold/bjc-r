@@ -5,69 +5,84 @@
       
       <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
       
-      <title> Choosing some items from a list</title>
+      <title> Elemente einer Liste ausw&auml;hlen</title>
       
    </head>   
       
 
    <body>
 
-<p><br>You've probably played Geography, the game in which one player says 
-a place name and the next player has to name another place whose first 
-letter is the last letter of the previous place: Newark, Kentucky, 
-Yonkers, San Francisco, Oklahoma. Have you ever gotten stuck on the 
-letter "A"? Oklahoma, Alabama, Asia, Alaska, America, Alameda... and so 
-on, forever.</p>
-How many states start and end with the same letter? To find out, we first need a list of all the states:<br>
+<p><br>Vielleicht kennst Du das Spiel "Geographie", wo ein Spieler
+  einen Ortsnamen sagt und der n&auml;chste Spieler einen andern Ortsnamen
+  sagen muss, dessen erster Buchstabe der letzte Buchstabe des
+  vorangegangenen Ortsnamens ist: Newark, Kentucky, Yonkers, San
+  Francisco, Oklahoma. Bist Du dabei jemals beim Buchstaben "A"
+  steckengeblieben? Oklahoma, Alabama, Asia, Alaska, America, Alameda
+  und so weiter.</p>
+Wie viele Staaten beginnen mit demselben Buchstaben? Um da
+  herauszufinden, brauchen wir erst eine Liste aller Staaten:<br>
 <img title="Alabama, Alaska, ... Wisconsin, Wyoming" alt="Alabama, Alaska, ... Wisconsin, Wyoming" src="/bjc-r/img/list/hof/states.png" border="0"/>
 
-<p>Now we want to select a subset of the states, namely the ones whose 
-first and last letters are the same. Here's the block we use for that:<br>
+<p>Jetzt wollen wir eine Untermenge von Staaten aussuchen, n&auml;mlich
+  die mit gleichem Anfangs- und Endbuchstabe. Hier ist der Block, den
+  wir daf&uuml;r verwenden:<br>
 <img title="KEEP ITEMS SUCH THAT (&lt;predicate&gt;) FROM (list)" alt="KEEP ITEMS SUCH THAT (&lt;predicate&gt;) FROM (list)" src="/bjc-r/img/list/hof/keepblock.png" border="0"/>
 
-<p>Like <code>map</code>, the <code>keep</code> block has a function as its first input. 
-Notice, though, that this grey ring's inner boundary is hexagonal. 
-This lets you know that you should use a <i>predicate </i>function, 
-which means a function that reports <code>true</code> or <code>false</code>.
+<p>So wie <code>map</code> hat der <code>keep</code> Block eine
+  Funktion als seine erste Eingabe. Merke allerdings, dass der innere
+  Rand dieses grauen Rings hexagonal ist. Das bedeutet, man sollte
+  eine <i>Pr&auml;dikaten</i> Funktion verwenden, das hei&szlig;t eine Funktion,
+  die <code>true</code> oder <code>false</code> zur&uuml;ckgibt.
 
-</p>We want to know whether two things are equal:<br>
+</p>Wir wollen wissen, ob zwei Dinge gleich sind:<br>
 <img title="&lt;&lt; &gt; = &lt; &gt;&gt;" alt="&lt;&lt; &gt; = &lt; &gt;&gt;" src="/bjc-r/img/list/hof/equalblock.png" border="0"/>
 
-<p>The first letter of a word is letter number 1:<br>
-<img title="(LETTER (1) OF [])" alt="(LETTER (1) OF [])" src="/bjc-r/img/list/hof/firstletterblock.png" border="0"><br>
-(Note that we've deleted the word "world" that <span class="snap">snap</span>  provides as a default 
-value, a hint about what kind of input is expected. The input slot must 
-be empty for our function-input notation to work.)
-
+<p>Der erste Buchstabe eines Worts ist Buchstabe Nummer 1:<br>
+<img title="(LETTER (1) OF [])" alt="(LETTER (1) OF [])"
+     src="/bjc-r/img/list/hof/firstletterblock.png" border="0"><br>
+(Bemerke, wir haben das Wort "world",
+     das <span class="snap">snap</span>  als Ausgangswert liefert,
+     gel&ouml;scht, ein Hinweis darauf, welche Art von Eingabe erwartet
+     wird. Das Eingabefeld muss leer sein, damit unsere Notation zur
+     Funktions-Eingabe funktioniert.)
 </p>
-<p>Finding the last letter is a little trickier; you find the length of 
-  the text and use that number to select which letter you want:<br>
+<p>Den letzten Buchstaben zu finden, ist etwas schwieriger; Du findest
+  die L&auml;nge des Textes und verwendest diese Zahl, um den gesuchten
+  Buchstaben auszusuchen:<br>
   <img title="(LETTER (LENGTH OF []) OF [])" alt="(LETTER (LENGTH OF []) OF [])" src="/bjc-r/img/list/hof/lastletterblock.png" border="0"/>
   
   </p>
 <p>
   </p>
-  Putting all these pieces together will give us the answer we want:<br>
-  <img title="KEEP ITEMS SUCH THAT (&lt;...&gt;) FROM (STATES)" alt="KEEP ITEMS SUCH THAT (&lt;...&gt;) FROM (STATES)" src="/bjc-r/img/list/hof/geography.png" border="0"/>
-  <br>You can see from the "length: 4" in the result that there are four such states. The one you can't see in this picture is Ohio.
-  
+Indem wir all diese St&uuml;cke zusammensetzen, bekommen wir die gew&uuml;nschte Antwort:<br>
+  <img title="KEEP ITEMS SUCH THAT (&lt;...&gt;) FROM (STATES)"
+  alt="KEEP ITEMS SUCH THAT (&lt;...&gt;) FROM (STATES)"
+  src="/bjc-r/img/list/hof/geography.png" border="0"/>
+<br>Du kannst von der Ausgabe "length: 4" im Ergebnis erkennen, dass
+es vier solcher Zust&auml;nde gibt. Der in diesem Bild unsichtbare ist Ohio.
 </p>
-<p><br>But if you're playing Geography, the question you really want answered is 
-"Which states start with such-and-such a letter?" You can define a block
- that takes a letter as input and gives the answer to that question:<br>
+<p><br>Aber wenn Du Geography spielst, ist die wirklich wichtige
+  Frage, "Welche Staaten beginnen mit einem bestimmten Buchstaben?" Du
+  kannst einen Block definieren, der einen Buchstaben als Eingabe
+  nimmt und als Ausgabe diese Frage beantwortet:<br>
 <img title="report (keep...) ..." alt="report (keep...) ..." src="/bjc-r/img/list/hof/state-starting.png" border="0"></p>
 <img title="states with P -&gt; pennsylvania" alt="states with P -&gt; pennsylvania" src="/bjc-r/img/list/hof/p-states.png" border="0"><p>
 <img title="states with S -&gt; south carolina, south dakota" alt="states with S -&gt; south carolina, south dakota" src="/bjc-r/img/list/hof/s-states.png" border="0"/>
 
-<p><br><br><b>Try this: </b>
-<p>Write an expression that will select all the words of at least 
-  five letters from a list. For example, if the words in the list are <code>being</code>, 
-  <code>for</code>, <code>the</code>, <code>benefit</code>, <code>of</code>, <code>mister</code>, and <b><code>kite</code></b>, 
-  then your block should choose the words <code>being</code>, <code>benefit</code>, and <code>mister</code>.
-<p>Write an expression that takes a list of mixed words and numbers, and selects just the numbers, 
-  (Hint: Look for <code>is</code> in the Operators palette.)
-<p>Write an expression that selects from a list of words the ones that start with a vowel. 
-  (Hint: Use <code>contains</code> in the Variables palette.)<br><br> 
+<p><br><br><b>Versuche dieses: </b>
+<p>Schreibe einen Ausdruck, der alle W&ouml;rter mit mindestens f&uuml;nf
+  Buchstaben aus einer Liste raussucht. Zum Beispiel, wenn die Liste
+  besteht aus <code>being</code>, 
+  <code>for</code>, <code>the</code>, <code>benefit</code>, <code>of</code>, <code>mister</code>, und <b><code>kite</code></b>, 
+  dann sollte Dein Block die
+  W&ouml;rter  <code>being</code>, <code>benefit</code>,
+  und <code>mister</code> raussuchen.
+<p>Schreibe einen Ausdruck, der eine Liste von gemischten W&ouml;rtern und
+  Zahlen nimmt, und nur die Zahlen aussucht. (Hinweis: Suche
+  nach <code>is</code> in der Operatoren-Palette.)
+<p>Schreibe einen Ausdruck der aus einer Liste W&ouml;rter diejenigen
+  aussucht, die mit einem Vokal anfangen. (Hinweis:
+  Verwende <code>contains</code> aus der Variablen-Palette.)<br><br> 
   
   </body>
 </html>
