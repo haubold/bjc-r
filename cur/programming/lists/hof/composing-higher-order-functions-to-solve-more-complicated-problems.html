@@ -5,7 +5,8 @@
       
       <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
       
-      <title> Composing higher order functions to solve more complicated problems</title>
+      <title> Funktionen h&ouml;herer Ordnung komponieren, um
+      kompliziertere Probleme zu l&ouml;sen.</title>
       
    </head>   
       
@@ -13,42 +14,82 @@
    <body>
 
 <p><br>
-  Suppose we want the squares of all the items of a list of numbers. That's a straightforward <code>map</code> problem:<br>
+  Stell Dir vor, wir wollen alle Elemente einer Liste quadrieren. Das
+  ist ein typisches <code>map</code> Problem:<br>
 <img border="0" title="map (() * ()) over list" alt="map (() * ()) over list" src="/bjc-r/img/list/hof/mapsq.png"/>
 
 <br><br>
-Now suppose instead that we want to select the odd numbers from a list of numbers. It's a little tricky figuring out how to tell if a number is odd, but apart from that it's a straightforward <code>keep</code> problem:<br>
+Aber jetzt stell Dir vor, wir wollen die ungeraten Zahlen aus der
+Liste ausw&auml;hlen. Es ist etwas schwierig, herauszufinden, ob eine Zahl
+gerade oder ungerade ist, aber abgesehen davon, ist es ein
+typisches <code>keep</code> Problem:<br>
+
 <img border="0" title="keep items such that <(() mod (2)) = (1)> from list..." alt="keep items such that <(() mod (2)) = (1)> from list..." src="/bjc-r/img/list/hof/keepodds.png"/>
 
 <br><br>
-But what if we want the squares of the odd numbers? This is neither a simple <code>map</code> nor a simple <code>keep</code>, but combines aspects of both. And we can solve the problem by using the value reported by the <code>keep</code> as the list input to <code>map</code>:<br>
+Aber was passiert, wenn wir die ungeraden Zahlen quadrieren wollen?
+Das ist weder ein einfaches <code>map</code> Problem, noch ein
+einfaches <code>keep</code> Problem, sondern verbindet Aspekte von
+beiden. Und wir l&ouml;sen die Aufgabe, indem wir den von <code>keep</code>
+zur&uuml;ckgegebenen Wert als Eingabe f&uuml;r <code>map</code> verwenden:<br>
 <img border="0" title="map square over keep odds from list" alt="map square over keep odds from list" src="/bjc-r/img/list/hof/sq-odds.png"/>
 
 <br>
-Don't be confused about which inputs do and don't have rings. It's the square <u>function</u> and the are-you-odd? <u>function</u> that we use as the first input to each higher order function. But, even though <code>keep</code> itself is a function, it's <i>the <u>list</u> reported by <code>keep </code></i>that we're using as the second input to <code>map</code>.
+Sei nicht verwirrt davon, welche Eingaben Ringe haben  und welche
+nicht. Wir verwenden die <code>square</code>-<u>Funktion</u> und die
+<code>are-you-odd?</code>-<u>Funktion</u>, die wir als die erste
+Eingabe f&uuml;r jede Funktion h&ouml;herer Ordnung verwenden. Aber
+obwohl <code>keep</code> ist eine Funktion, verwenden wir die
+von <code>keep</code> zur&uuml;ckgegebene Liste als die zweite Eingabe
+zu <code>map</code>.
 
-</p><br>We're building up to one the great beautiful procedures you'll see in this course: We want to take a phrase, such as &quot;Beauty and Joy of Computing,&quot; and report its acronym, the word BJC. You've explored two of the pieces of this problem in previous activities:
-<br>   - Select only the words with five or more letters.<br>   - Make a list of the first letters of the words.
-<br>Review those activities if you don't remember how to solve those problems.
+</p><br>Wir arbeiten auf eine der gro&szlig;en, sch&ouml;nen Abl&auml;ufe hin, die Du
+in diesem Kurs sehen wirst: Wir wollen eine Phrase nehmen, etwa
+&quot;Beauty and Joy of Computing,&quot; und sein Akronym ausgeben,
+BJC. Du hast bereits zwei Teile der L&ouml;sung kennengelernt:
+<br>   - W&auml;hle nur W&ouml;rter mit f&uuml;nf oder mehr Buchstaben.<br> - Mache
+eine Liste der ersten Buchstaben der W&ouml;rter. 
+<br>Schau noch einmal nach, wie das geht, wenn Du Dich nicht mehr erinnerst.
 
-<p>But there are two more steps, one at the beginning of the problem and one at the end, both related to the fact that people (the users of your program) want to see words and phrases in the form of text strings, but as you've seen, it's much easier to compute functions of those words and sentences if we have them in the form of lists, so we can use the higher order functions you're learning.
+<p>Aber es gibt zwei weitere Schritte, einer am Anfang der Aufgabe und
+  einer am Ende, die beide damit zu tun haben, dass Leute (die
+  Benutzer Deines Programms) W&ouml;rter und Phrasen in der Form von
+  Text-Strings sehen wollen, aber - wie Du gesehen hast - ist es viel
+  einfacher, Funktionen dieser W&ouml;rter und S&auml;tze zu berechnen, wenn sie
+  als Listen vorliegen, damit wir die Funktionen h&ouml;herer Ordnung
+  verwenden k&ouml;nnen, die Du gerade lernst. 
 
 </p>
-To translate from a text string to a list of words, <span class="snap">snap</span>  provides the reporter <code>sentence-&gt;list</code> (pronounced &quot;sentence to list&quot;) that takes a text string as input and reports a list of words:<br>
+Um einen Text-String in eine Liste W&ouml;rterliste zu
+&Uuml;bersetzen, liefert <span class="snap">snap</span>  den
+Reporter <code>sentence-&gt;list</code> (sprich &quot;sentence to
+list&quot;), der einen Text-String als Eingabe nimmt und eine
+W&ouml;rterliste ausgibt::<br>
 <img border="0" src="/bjc-r/img/list/hof/stol-bjc.png" alt="sentence->list block" title="sentence->list block"/>
-<br>As usual, you see only the first three list elements in the speech balloon, but you're told at the bottom that the length of the list is 5, as it should be for the five words in the given phrase.
+<br>Wie &uuml;blich siehst Du nur die ersten drei Elemente einer Liste in
+Sprach-Ballon, aber Dir wird am Ende der Phrase gesagt, dass die Liste
+5 lang ist, wie es sein sollte f&uuml;r die f&uuml;nf W&ouml;rter in einer Phrase.
 
-<p>Once we have the list, we can use the tools we've already built to get a list of the first letters of the long words. What we want, though, is a single word as the reported value. We can use one of the higher order functions to join the letters into a string.
+<p>Wenn wir die Liste haben, k&ouml;nnen wir die bereits angefertigten
+  Werkzeuge verwenden, um eine Liste der ersten Buchstaben der langen
+  W&ouml;rter zu erzeugen. Was wir jedoch wollen, ist ein einzelnes Wort
+  als Ausgabe. Wir k&ouml;nnen eine der Funktionen h&ouml;herer Ordnung
+  verwenden, um die Buchstaben zu einem String zusammenzuziehen.
 
-</p><b>Try this: </b>Should we use <code>map</code>, <code>keep</code>, or <code>combine</code> for this purpose?
+</p><b>Versuche das: </b>Sollten wir <code>map</code>,
+oder <code>keep</code>, oder <code>combine</code> daf&uuml;r verwenden?
 
-<p>Here's the final result:<br>
+<p>Hier ist das Ergebnis:<br>
 <img border="0" src="/bjc-r/img/list/hof/acronym.png" alt="acronym definition" title="acronym definition" /><br>
 <img border="0" src="/bjc-r/img/list/hof/bad-bjc.png" alt="acronym reports BC instead of BJC" title="acronym reports BC instead of BJC"/>
-<br>Oops! The word &quot;Joy&quot; is shorter than five letters, but it's still an important word in the acronym. We need a better algorithm.
+<br>Oh! Das Wort &quot;Joy&quot; ist k&uuml;rzer als f&uuml;nf Buchstaben, aber
+es ist trotzdem ein wichtiges Wort im Akronym. Wir brauchen einen
+besseren Algorithmus.
 
-</p><br><br><b>Try this: <br></b>
-Modify the <code>acronym</code> block so that, instead of keeping long words, it keeps words that start with a capital letter. (Hint: Experiment with the <code>unicode of</code> block.)<br>
+</p><br><br><b>Versuche dies: <br></b>
+Modifizieren den <code>acronym</code> Block so dass er anstatt lange
+W&ouml;rter zu behalten, W&ouml;rter beh&auml;lt, die mit Gro&szlig;buchstaben
+anfangen. (Hinweis: Experimentiere mit dem <code>unicode of</code> Block.)<br>
 <img border="0" src="/bjc-r/img/list/hof/good-bjc.png" alt="acronym reports BJC" title="acronym reports BJC"/><p>
 <img border="0" src="/bjc-r/img/list/hof/ucb-acro.png" alt="acronym of UCB" title="acronym of UCB"/></p>
 <img border="0" src="/bjc-r/img/list/hof/byob-acro.png" alt="BYOB" title="BYOB"/><br><br>  
